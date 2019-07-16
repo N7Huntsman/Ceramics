@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StuffCategoryDef>
+    <defName>Ceramic</defName>
+    <label>hardened ceramic</label>
+  </StuffCategoryDef>
+
+  <StuffCategoryDef>
+    <defName>Masonry</defName>
+    <label>masonry</label>
+  </StuffCategoryDef>
+  
+</Defs>

@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============== Sand ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>Sand</defName>
+    <label>sand</label>
+    <description>A pile of fine-grained sand. It's coarse, rough, and irritating, and it gets everywhere. Even so, it's an important component in the production of ceramic products.</description>
+    <category>Item</category>
+    <graphicData>
+      <texPath>Things/Item/Sand</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Pickup</soundInteract>
+    <soundDrop>Standard_Pickup</soundDrop>
+    <statBases>
+		<Mass>0.05</Mass>
+		<Beauty>-4</Beauty>
+        <Flammability>0</Flammability>	  
+    </statBases>
+    <useHitPoints>true</useHitPoints>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <!--=============== Raw Clay ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>RawClay</defName>
+    <label>clay</label>
+    <description>A mixture of finely-grained rock and water, creating a maleable construction material that can be formed into useful shapes.</description>
+    <graphicData>
+      <texPath>Things/Item/Clay</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Pickup</soundInteract>
+    <soundDrop>Standard_Pickup</soundDrop>
+    <statBases>
+      <MarketValue>0.1</MarketValue>
+      <Mass>0.1</Mass>
+      <DeteriorationRate>1</DeteriorationRate>	  
+    </statBases>
+    <useHitPoints>true</useHitPoints>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <deepCommonality>0.6</deepCommonality>
+    <deepCountPerPortion>70</deepCountPerPortion>
+    <deepLumpSizeRange>
+      <min>6</min>
+      <max>30</max>
+    </deepLumpSizeRange>
+  </ThingDef>
+
+  <!--=============== Wet Mudbrick ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>RawMudbrick</defName>
+    <label>wet mud brick</label>
+    <description>Fresh clay formed into a rough brick. It will need to be dried before it's of any use.</description>
+    <graphicData>
+      <texPath>Things/Item/RawMudBrick</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Pickup</soundInteract>
+    <soundDrop>Standard_Pickup</soundDrop>	
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>	
+    <statBases>
+      <Mass>1</Mass>
+    </statBases>
+  </ThingDef>
+
+	<RecipeDef ParentName="MakeStoneBlocksBase">
+		<defName>Make_RawMudbricks</defName>
+		<label>make mud bricks</label>
+		<description>shape hay and clay into mud bricks.</description>
+		<ingredients>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>RawClay</li>
+				</thingDefs>
+			</filter>
+			<count>50</count>
+			</li>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>Hay</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Hay</li>			
+				<li>RawClay</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workAmount>600</workAmount>
+    <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+		<targetCountAdjustment>35</targetCountAdjustment>
+		<recipeUsers>
+			<li>CraftingSpot</li>
+			<li>CeramicsBench_Basic</li>	
+			<li>CeramicsBench_Electric</li>			
+		</recipeUsers>		
+		<products>
+			<RawMudbrick>35</RawMudbrick>
+		</products>
+	</RecipeDef>
+
+  <!--=============== Dried Mud Brick ====================-->
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>DriedMudBrick</defName>
+    <label>mud brick</label>
+    <description>Bricks made of mud with straw as a binder. Cheap and fireproof, but not particularly strong and somewhat ugly.</description>
+    <graphicData>
+      <texPath>Things/Item/DriedMudBrick</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+      <SharpDamageMultiplier>0.25</SharpDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <categories Inherit="false">
+        <li>Masonry</li>
+      </categories>	
+      <color>(162,152,121)</color>
+      <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>mudbrick</stuffAdjective>
+      <statFactors>
+        <Beauty>-2</Beauty>  
+        <MaxHitPoints>0.6</MaxHitPoints>
+				<WorkToBuild>2</WorkToBuild>
+				<WorkToMake>0.8</WorkToMake>
+      </statFactors>
+      <smeltable>false</smeltable>	  
+    </stuffProps>
+  </ThingDef>
+
+  <!--=============== Unfired Brick ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>UnfiredBrick</defName>
+    <label>unfired brick</label>
+    <description>Fresh clay formed into a rough brick. It will need to be fired before it's of any use.</description>
+    <graphicData>
+      <texPath>Things/Item/UnfiredBrick</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>	
+    <statBases>
+      <Mass>1</Mass>
+    </statBases>
+  </ThingDef>
+
+	<RecipeDef ParentName="MakeStoneBlocksBase">
+		<defName>Make_RawBricks</defName>
+		<label>make mud bricks</label>
+		<description>shape hay and clay into mud bricks.</description>
+		<ingredients>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>RawClay</li>
+				</thingDefs>
+			</filter>
+			<count>50</count>
+			</li>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>Sand</li>
+				</thingDefs>
+			</filter>
+			<count>20</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Sand</li>			
+				<li>RawClay</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workAmount>600</workAmount>
+    <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+		<targetCountAdjustment>35</targetCountAdjustment>
+		<recipeUsers>
+			<li>CraftingSpot</li>
+			<li>CeramicsBench_Basic</li>	
+			<li>CeramicsBench_Electric</li>			
+		</recipeUsers>		
+		<products>
+			<UnfiredBrick>35</UnfiredBrick>
+		</products>
+	</RecipeDef>
+
+  <!--=============== Fired Brick ====================-->
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>FiredBrick</defName>
+    <label>brick</label>
+    <description>Fired clay bricks made of clay and sand to reduce shrinkage. Economical and fireproof, they make for a sturdy if plain-looking building material.</description>
+    <graphicData>
+      <texPath>Things/Item/FiredBrick</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+      <SharpDamageMultiplier>0.25</SharpDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <categories Inherit="false">
+        <li>Masonry</li>
+      </categories>		
+      <color>(177,110,96)</color>
+      <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>brick</stuffAdjective>
+      <statFactors>
+        <Beauty>1</Beauty>  
+        <MaxHitPoints>1.5</MaxHitPoints>
+				<WorkToBuild>4</WorkToBuild>
+				<WorkToMake>1.1</WorkToMake>
+      </statFactors>
+      <smeltable>false</smeltable>	  
+    </stuffProps>
+  </ThingDef>
+
+  <!--=============== Hardened Ceramic ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>HardenedCeramic</defName>
+    <label>hardened ceramic</label>
+    <description>An ingot of incredibly hard ceramic, historically used in ballistic armor and extremely sharp blades. While lighter than steel, its hardness makes it somewhat brittle.</description>
+    <graphicData>
+      <texPath>Things/Item/HardenedCeramic</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>ChunkRock_Drop</soundInteract>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <statBases>
+      <MarketValue>4.5</MarketValue>
+      <Mass>0.02</Mass>
+      <StuffPower_Armor_Sharp>1.2</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.4</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.8</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.05</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.5</BluntDamageMultiplier>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <stuffProps>
+      <categories Inherit="false">
+        <li>Ceramic</li>
+      </categories>
+      <commonality>0.00</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(69,67,67)</color>
+      <soundImpactStuff>BulletImpact_Stone</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>1</MaxHitPoints>
+        <Beauty>-2</Beauty>
+        <Flammability>0</Flammability>
+      </statFactors>
+      <smeltable>false</smeltable>
+    </stuffProps>
+  </ThingDef>
+ 
+ 
+</Defs>
