@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<!-- Allow art to be made from clay. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="SculptureBase"]</xpath>
+		<value>
+			<stuffCategories>		
+				<li>Clay</li>
+			</stuffCategories>				
+		</value>
+	</Operation>
+	
+</Patch>

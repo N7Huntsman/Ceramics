@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============== Clay Gathering Spot ====================-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>ClayGatheringSpot</defName>
+		<label>clay gathering spot</label>
+		<description>A place for pawns to collect raw clay from wet ground.</description>
+		<category>Building</category>
+		<thingClass>Building_WorkTable</thingClass>
+		<graphicData>
+			<texPath>Things/Building/ClaySpot</texPath>
+			<shaderType>MetaOverlay</shaderType>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<tickerType>Rare</tickerType>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<statBases>
+			<WorkToBuild>0</WorkToBuild>
+			<SellPriceFactor>0.70</SellPriceFactor>
+		</statBases>
+		<soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<repairEffect>Repair</repairEffect>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<useHitPoints>False</useHitPoints>
+		<size>(1,1)</size>
+		<designationCategory>Production</designationCategory>
+		<passability>Standable</passability>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />		
+		</comps>	
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		</building>
+		<inspectorTabs>
+		  <li>ITab_Bills</li>
+		</inspectorTabs>		
+		<terrainAffordanceNeeded>Bridgeable</terrainAffordanceNeeded>
+		<placeWorkers>
+			<li>PlaceWorker_ReportWorkSpeedPenalties</li>
+		</placeWorkers>
+	</ThingDef>
+
+  <!--=============== Clay Pit ====================-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>ClayPit</defName>
+		<thingClass>Building_WorkTable</thingClass>	
+		<label>clay pit</label>
+		<description>A shallow pit dug for the purpose of harvesting clay. Must be placed on firm, dry ground.</description>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<destroyable>true</destroyable>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<Flammability>0</Flammability>
+			<WorkToBuild>5000</WorkToBuild>
+			<Beauty>-30</Beauty>			
+		</statBases>
+		<passability>PassThroughOnly</passability>
+		<canOverlapZones>false</canOverlapZones>
+		<pathCost>40</pathCost>
+		<terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
+		<holdsRoof>false</holdsRoof>
+		<surfaceType>Item</surfaceType>
+		<rotatable>false</rotatable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<designationCategory>Production</designationCategory>
+		<constructEffect>ConstructDirt</constructEffect>
+		<inspectorTabs>
+		  <li>ITab_Bills</li>
+		</inspectorTabs>		
+		<building>
+			<isInert>true</isInert>
+			<deconstructible>true</deconstructible>
+			<blueprintGraphicData>
+				<texPath>Things/Building/ClayPit</texPath>
+			</blueprintGraphicData>		
+		</building>		
+		<uiIconPath>Things/Icon/ClayPit_icon</uiIconPath>
+		<size>(3,3)</size>		
+		<graphicData>
+			<texPath>Things/Building/ClayPit</texPath>
+			<drawSize>(3,3)</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>			
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />		
+		</comps>		
+		<costList>
+			<WoodLog>30</WoodLog>
+		</costList>
+	</ThingDef>
+  
+  <!--=============== Ceramics Workbench ====================-->
+  <ThingDef ParentName="BenchBase">
+    <defName>CeramicsBench_Basic</defName>
+    <label>ceramics bench</label>
+    <description>A workbench for forming clay into useful objects. It includes a number of basic tools and a small, manually-powered potter's wheel.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/TableCeramic</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2.33,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <costStuffCount>60</costStuffCount>
+    <costList>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+      <li>Masonry</li>		  
+    </stuffCategories>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
+    </statBases>
+    <size>(2,1)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <comps>
+	  <li Class="CompProperties_Forbiddable" />		
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>BasicCeramics</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <!--=============== Electric Ceramics Workbench ====================-->    
+  <ThingDef ParentName="BenchBase">
+    <defName>CeramicsBench_Electric</defName>
+    <label>electric ceramics bench</label>
+    <description>A workbench for forming clay into useful objects. It includes numerous tools and an electric potter's wheel.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/TableCeramicElectric</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2.33,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <costStuffCount>75</costStuffCount>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+      <li>Masonry</li>	
+    </stuffCategories>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>2250</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <size>(2,1)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <unpoweredWorkTableWorkSpeedFactor>0.5</unpoweredWorkTableWorkSpeedFactor>
+    </building>
+    <comps>
+	  <li Class="CompProperties_Forbiddable" />		
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>120</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>BasicCeramics</li>
+      <li>Electricity</li>
+    </researchPrerequisites>
+  </ThingDef>  
+  
+  <!--=============== Drying Rack ====================-->  
+  <ThingDef ParentName="BuildingBase">
+    <defName>Building_DryingRack</defName>
+    <label>drying rack</label>
+    <description>A simple rack for drying mud bricks on.</description>
+    <thingClass>ExpandableFermenting.Building_Fermenting</thingClass>
+    <size>(2,1)</size>	
+    <graphicData>
+      <drawSize>(2.33,1.5)</drawSize>	
+      <texPath>Things/Building/DryingRack</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>	  
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.75, 0.35, 0.33)</volume>
+      </shadowData>
+    </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.25</fillPercent>
+    <pathCost>60</pathCost>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <statBases>
+      <WorkToBuild>400</WorkToBuild>
+      <Mass>2.5</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <WoodLog>40</WoodLog>
+    </costList>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />			
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-1</minSafeTemperature>
+				<maxSafeTemperature>60</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+			</li>		
+			<li Class="ExpandableFermenting.CompProperties_Processing">
+				<ingredientDef>N7_RawMudbrick</ingredientDef>
+				<productDef>N7_DriedMudbrick</productDef>			
+				<capacity>30</capacity>
+				<fermentationDuration>40000</fermentationDuration> 
+				<processFinishedLabel>Fired</processFinishedLabel>
+			</li>
+		</comps>			
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <researchPrerequisites>
+      <li>PrimitiveCeramics</li>
+    </researchPrerequisites>	
+    <designationCategory>Production</designationCategory>
+    <constructEffect>ConstructWood</constructEffect>
+  </ThingDef>
+
+  <!--=============== Primitive Kiln ====================-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>Building_PrimitiveKiln</defName>
+    <label>primitive kiln</label>
+    <description>A crude, inefficient kiln for firing bricks in.</description>
+    <thingClass>ExpandableFermenting.Building_Processing</thingClass>
+    <size>(1,1)</size>	
+    <graphicData>
+      <drawSize>(1.3,1.8)</drawSize>	
+      <texPath>Things/Building/PrimKiln</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shadowData>
+        <volume>(0.75, 0.35, 0.33)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.25</fillPercent>
+    <pathCost>60</pathCost>
+    <statBases>
+      <WorkToBuild>1100</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <N7_DriedMudbrick>50</N7_DriedMudbrick>
+    </costList>	
+		<comps>
+			<li Class="CompProperties_Forbiddable" />			
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>55.0</fuelConsumptionRate>
+				<fuelCapacity>30.0</fuelCapacity>
+				<fuelFilter>
+				  <thingDefs>
+					<li>WoodLog</li>
+				  </thingDefs>
+				</fuelFilter>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+			</li>			
+			<li Class="ExpandableFermenting.CompProperties_Fermenting">
+				<ingredientDef>N7_UnfiredBrick</ingredientDef>
+				<productDef>N7_FiredBrick</productDef>			
+				<capacity>30</capacity>
+				<fermentationDuration>45000</fermentationDuration> 
+				<processFinishedLabel>Dried</processFinishedLabel>
+			</li>
+		</comps>			
+    <tickerType>Normal</tickerType>
+    <rotatable>true</rotatable>
+    <designationCategory>Production</designationCategory>
+  </ThingDef> 
+
+   <!--=============== Basic Kiln ====================-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>Building_BasicKiln</defName>
+    <label>basic kiln</label>
+    <description>A simple kiln for firing ceramic bricks in.</description>
+    <thingClass>ExpandableFermenting.Building_Processing</thingClass>
+    <size>(2,1)</size>	
+    <graphicData>
+      <drawSize>(2.33,1.5)</drawSize>	
+      <texPath>Things/Building/BasicKiln</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>		 	  
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.75, 0.35, 0.33)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.25</fillPercent>
+    <pathCost>60</pathCost>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li>Stony</li>
+      <li>Masonry</li>		  
+    </stuffCategories>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />			
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>50.0</fuelConsumptionRate>
+				<fuelCapacity>50.0</fuelCapacity>
+				<fuelFilter>
+				  <thingDefs>
+					<li>WoodLog</li>
+				  </thingDefs>
+				</fuelFilter>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+			</li>			
+			<li Class="ExpandableFermenting.CompProperties_Processing">
+				<ingredientDef>N7_UnfiredBrick</ingredientDef>
+				<productDef>N7_FiredBrick</productDef>			
+				<capacity>30</capacity>
+				<fermentationDuration>40000</fermentationDuration> 
+				<processFinishedLabel>Fired</processFinishedLabel>
+			</li>
+		</comps>			
+    <tickerType>Normal</tickerType>
+    <rotatable>true</rotatable>
+    <designationCategory>Production</designationCategory>
+  </ThingDef>
+  
+  <!--=============== Electric Kiln ====================-->  
+  <ThingDef ParentName="BuildingBase">
+    <defName>Building_ElectricKiln</defName>
+    <label>electric kiln</label>
+    <description>A large, powered kiln for firing ceramics in.</description>
+    <thingClass>ExpandableFermenting.Building_Processing</thingClass>
+    <size>(2,2)</size>	
+    <graphicData>
+      <drawSize>(2.33,2.33)</drawSize>	
+      <texPath>Things/Building/ElectricKiln</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>		  
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(1.8, 1.8, 1.8)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.25</fillPercent>
+    <pathCost>60</pathCost>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costStuffCount>50</costStuffCount>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>	
+    <stuffCategories>
+      <li>Stony</li>
+      <li>Masonry</li>		  
+    </stuffCategories>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />			
+			<li Class="ExpandableFermenting.CompProperties_Processing">
+				<ingredientDef>N7_UnfiredBrick</ingredientDef>
+				<productDef>N7_FiredBrick</productDef>			
+				<capacity>60</capacity>
+				<fermentationDuration>34000</fermentationDuration> 
+				<processFinishedLabel>Fired</processFinishedLabel>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>250</basePowerConsumption>
+			</li>			
+		</comps>			
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <designationCategory>Production</designationCategory>
+  </ThingDef>
+  
+  <!--=============== Material Processor ====================-->
+  <ThingDef ParentName="BenchBase">
+    <defName>MaterialProcessor</defName>
+    <label>materials processing bench</label>
+    <description>An all-in-one workstation with advanced grinders, furnaces, and processors capable of converting raw materials into advanced composites.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Processor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>	  
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2.33,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <costList>
+      <Steel>90</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>2250</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <size>(2,1)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <unpoweredWorkTableWorkSpeedFactor>0.05</unpoweredWorkTableWorkSpeedFactor>
+    </building>
+    <comps>
+	  <li Class="CompProperties_Forbiddable" />		
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>300</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>AdvancedCeramics</li>
+      <li>Machining</li>
+    </researchPrerequisites>
+  </ThingDef>  
+  
+  
+</Defs>	

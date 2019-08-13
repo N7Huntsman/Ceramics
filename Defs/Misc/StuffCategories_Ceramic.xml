@@ -10,5 +10,15 @@
     <defName>Masonry</defName>
     <label>masonry</label>
   </StuffCategoryDef>
-  
+
+  <StuffCategoryDef>
+    <defName>Clay</defName>
+    <label>clay</label>
+  </StuffCategoryDef>
+ 
+  <StuffCategoryDef>
+    <defName>Fiber</defName>
+    <label>fiber</label>
+  </StuffCategoryDef>
+ 
 </Defs>

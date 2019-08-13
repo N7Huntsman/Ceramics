@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef ParentName="MakeStoneBlocksBase">
+		<defName>Make_ComponentsFromWafer</defName>
+		<label>Manufacture 10 compnents</label>
+		<description>Use silica wafers and steel to manufacture components.</description>
+		<ingredients>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>Steel</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+			</li>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>N7_SilicaWafer</li>
+				</thingDefs>
+			</filter>
+			<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>N7_SilicaWafer</li>				
+			</thingDefs>
+		</fixedIngredientFilter>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>		
+		<workAmount>6000</workAmount>
+		<workSkill>Crafting</workSkill>		
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<targetCountAdjustment>35</targetCountAdjustment>
+		<recipeUsers>
+			<li>TableMachining</li>
+		</recipeUsers>		
+		<products>
+			<ComponentIndustrial>10</ComponentIndustrial>
+		</products>
+	</RecipeDef>
+
+</Defs>

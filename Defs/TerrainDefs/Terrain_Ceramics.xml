@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TerrainDef ParentName="FloorBase">
+    <defName>FiredBrickFloor</defName>
+    <label>fired brick flooring</label> 
+    <renderPrecedence>221</renderPrecedence>
+    <description>Fired bricks laid to form a floor. Cheaper than stone bricks but prettier to look at than flagstone, they offer a nice compromise between cost, utility, and appearance.</description>
+    <texturePath>Things/Terrain/LaidBrickRoad</texturePath>
+    <statBases>
+      <WorkToBuild>700</WorkToBuild>
+      <Beauty>0.5</Beauty>
+    </statBases>
+    <researchPrerequisites>
+      <li>BasicCeramics</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+    <costList>
+      <N7_FiredBrick>4</N7_FiredBrick>
+    </costList>	
+  </TerrainDef>
+
+  <TerrainDef ParentName="FloorBase">
+    <defName>PorcelainFloor</defName>
+    <label>porcelain tile</label> 
+    <renderPrecedence>241</renderPrecedence>
+    <description>Carefully laid, smooth white porcelain tiles make for an appealing, easy to clear floor.</description>
+    <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+    <color>(246,246,245)</color>
+    <statBases>
+      <WorkToBuild>950</WorkToBuild>
+      <Beauty>0.8</Beauty>
+      <Cleanliness>0.35</Cleanliness>	  
+    </statBases>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <costList>
+      <N7_Porcelain>5</N7_Porcelain>
+    </costList>
+    <researchPrerequisites>
+      <li>ImprovedCeramics</li>
+    </researchPrerequisites>	
+  </TerrainDef>
+
+</Defs>

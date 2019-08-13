@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ResearchProjectDef>
+    <defName>PrimitiveCeramics</defName>
+    <label>clay working</label>
+    <description>Gather clay and form it into useful shapes.</description>
+    <baseCost>300</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <researchViewX>0</researchViewX>
+    <researchViewY>5.25</researchViewY>
+    <tags>
+      <li>TribalStart</li>
+    </tags>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>BasicCeramics</defName>
+    <label>ceramics</label>
+    <description>Better tools and kilns for working with clay. It also allows the creation of clay sculptures.</description>
+    <baseCost>400</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <researchViewX>1</researchViewX>
+    <researchViewY>5.25</researchViewY>
+    <prerequisites>
+      <li>PrimitiveCeramics</li>
+    </prerequisites>	
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ImprovedCeramics</defName>
+    <label>improved ceramics</label>
+    <description>Better tools and materials for working with ceramics, including larger, more efficient kilns and porcelain.</description>
+    <baseCost>600</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>3</researchViewX>
+    <researchViewY>5.5</researchViewY>
+    <prerequisites>
+      <li>BasicCeramics</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>AdvancedCeramics</defName>
+    <label>advanced ceramics</label>
+    <description>Provides advanced electric kilns and processing units used to refine materials into advanced composites, such as those used in ballistic trauma plates and microelectronics.</description>
+    <baseCost>600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>5</researchViewX>
+    <researchViewY>5.5</researchViewY>
+    <prerequisites>
+      <li>ImprovedCeramics</li>
+      <li>Machining</li>	  
+    </prerequisites>
+  </ResearchProjectDef>
+
+</Defs>

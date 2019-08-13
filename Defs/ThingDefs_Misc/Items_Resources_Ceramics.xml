@@ -3,7 +3,7 @@
 
   <!--=============== Sand ====================-->
   <ThingDef ParentName="ResourceBase">
-    <defName>Sand</defName>
+    <defName>N7_Sand</defName>
     <label>sand</label>
     <description>A pile of fine-grained sand. It's coarse, rough, and irritating, and it gets everywhere. Even so, it's an important component in the production of ceramic products.</description>
     <category>Item</category>
@@ -23,10 +23,95 @@
       <li>ResourcesRaw</li>
     </thingCategories>
   </ThingDef>
+
+	<RecipeDef>
+		<defName>Collect50Sand</defName>
+		<label>collect 50 sand</label>
+		<description>Collect 50 sand.</description>
+		<jobString>Collecting sand.</jobString>
+		<workSpeedStat>MiningSpeed</workSpeedStat>
+		<effectWorking>ConstructDirt</effectWorking>
+		<workSkillLearnFactor>0</workSkillLearnFactor>
+		<soundWorking>Interact_ConstructDirt</soundWorking>
+		<workAmount>600</workAmount>
+		<products>
+			<N7_Sand>50</N7_Sand>
+		</products>
+		<workSkill>Mining</workSkill>
+  		<recipeUsers>
+			<li>ClayPit</li>
+			<li>ClayGatheringSpot</li>			
+		</recipeUsers>
+	</RecipeDef>
+
+  <!--=============== Plant Fiber ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>N7_PlantFiber</defName>
+    <label>fiber</label>
+    <description>Coarse plant matter, a useful binder when making clay bricks.</description>
+    <category>Item</category>
+    <graphicData>
+      <texPath>Things/Item/Fiber</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Pickup</soundInteract>
+    <soundDrop>Standard_Pickup</soundDrop>
+    <statBases>
+		<Mass>0.02</Mass>
+		<Beauty>-4</Beauty>
+        <Flammability>1</Flammability>	  
+    </statBases>
+    <stuffProps>
+      <categories Inherit="false">
+        <li>Fiber</li>
+      </categories>
+      <statFactors>
+			<Flammability>1</Flammability>
+      </statFactors>
+    </stuffProps>	
+    <useHitPoints>true</useHitPoints>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+	<RecipeDef ParentName="MakeStoneBlocksBase">
+		<defName>Make_FiberFromWood</defName>
+		<label>Break down plant fibers</label>
+		<description>Break down wood or other plant matter into loose plant fibers.</description>
+		<jobString>Breaking down plant fibers.</jobString>
+		<ingredients>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>WoodLog</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+			</li>			
+	 	</ingredients>
+		<allowMixingIngredients>true</allowMixingIngredients>		
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>		
+		<workAmount>600</workAmount>
+		<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Recipe_MakeWoodPlanks_Hand</soundWorking>
+		<targetCountAdjustment>50</targetCountAdjustment>
+		<recipeUsers>
+			<li>CraftingSpot</li>
+		</recipeUsers>		
+		<products>
+			<N7_PlantFiber>50</N7_PlantFiber>
+		</products>
+	</RecipeDef>
   
   <!--=============== Raw Clay ====================-->
   <ThingDef ParentName="ResourceBase">
-    <defName>RawClay</defName>
+    <defName>N7_RawClay</defName>
     <label>clay</label>
     <description>A mixture of finely-grained rock and water, creating a maleable construction material that can be formed into useful shapes.</description>
     <graphicData>
@@ -38,13 +123,29 @@
     <statBases>
       <MarketValue>0.1</MarketValue>
       <Mass>0.1</Mass>
-      <DeteriorationRate>1</DeteriorationRate>	  
+      <DeteriorationRate>0.5</DeteriorationRate>	  
     </statBases>
     <useHitPoints>true</useHitPoints>
     <thingCategories>
       <li>ResourcesRaw</li>
     </thingCategories>
-    <deepCommonality>0.6</deepCommonality>
+    <stuffProps>
+      <categories Inherit="false">
+        <li>Clay</li>
+      </categories>
+      <color>(128,70,27)</color>	
+      <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>clay</stuffAdjective>
+      <statFactors>
+			<MarketValue>0.6</MarketValue>
+			<Flammability>0</Flammability>
+			<Beauty>0.5</Beauty>  
+      </statFactors>
+      <smeltable>false</smeltable>	  
+    </stuffProps>	 
+    <deepCommonality>0.1</deepCommonality>
     <deepCountPerPortion>70</deepCountPerPortion>
     <deepLumpSizeRange>
       <min>6</min>
@@ -52,9 +153,29 @@
     </deepLumpSizeRange>
   </ThingDef>
 
+	<RecipeDef>
+		<defName>Collect25Clay</defName>
+		<label>collect 25 clay</label>
+		<description>Collect 25 clay to be processed into a useful building material.</description>
+		<jobString>Collecting clay.</jobString>
+		<workSpeedStat>MiningSpeed</workSpeedStat>
+		<effectWorking>ConstructDirt</effectWorking>
+		<workSkillLearnFactor>0.15</workSkillLearnFactor>
+		<soundWorking>Interact_ConstructDirt</soundWorking>
+		<workAmount>700</workAmount>
+		<products>
+			<N7_RawClay>25</N7_RawClay>
+		</products>
+		<workSkill>Mining</workSkill>
+  		<recipeUsers>
+			<li>ClayPit</li>
+			<li>ClayGatheringSpot</li>			
+		</recipeUsers>
+	</RecipeDef>
+
   <!--=============== Wet Mudbrick ====================-->
   <ThingDef ParentName="ResourceBase">
-    <defName>RawMudbrick</defName>
+    <defName>N7_RawMudbrick</defName>
     <label>wet mud brick</label>
     <description>Fresh clay formed into a rough brick. It will need to be dried before it's of any use.</description>
     <graphicData>
@@ -65,7 +186,7 @@
     <soundDrop>Standard_Pickup</soundDrop>	
     <thingCategories>
       <li>ResourcesRaw</li>
-    </thingCategories>	
+    </thingCategories>
     <statBases>
       <Mass>1</Mass>
     </statBases>
@@ -74,12 +195,13 @@
 	<RecipeDef ParentName="MakeStoneBlocksBase">
 		<defName>Make_RawMudbricks</defName>
 		<label>make mud bricks</label>
-		<description>shape hay and clay into mud bricks.</description>
+		<description>Form clay and plant fiber into mud bricks.</description>
+		<jobString>Forming mud bricks.</jobString>		
 		<ingredients>
 			<li>
 			<filter>
 				<thingDefs>
-					<li>RawClay</li>
+					<li>N7_RawClay</li>
 				</thingDefs>
 			</filter>
 			<count>50</count>
@@ -87,7 +209,7 @@
 			<li>
 			<filter>
 				<thingDefs>
-					<li>Hay</li>
+					<li>N7_PlantFiber</li>
 				</thingDefs>
 			</filter>
 			<count>10</count>
@@ -95,14 +217,15 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>Hay</li>			
-				<li>RawClay</li>
+				<li>N7_PlantFiber</li>
 			</thingDefs>
 		</fixedIngredientFilter>
+		<allowMixingIngredients>true</allowMixingIngredients>			
 		<workAmount>600</workAmount>
-    <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+		<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
 		<effectWorking>CutStone</effectWorking>
-		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+		<soundWorking>Interact_ConstructDirt</soundWorking>
+		<researchPrerequisite>PrimitiveCeramics</researchPrerequisite>			
 		<targetCountAdjustment>35</targetCountAdjustment>
 		<recipeUsers>
 			<li>CraftingSpot</li>
@@ -110,15 +233,15 @@
 			<li>CeramicsBench_Electric</li>			
 		</recipeUsers>		
 		<products>
-			<RawMudbrick>35</RawMudbrick>
+			<N7_RawMudbrick>35</N7_RawMudbrick>
 		</products>
 	</RecipeDef>
 
   <!--=============== Dried Mud Brick ====================-->
   <ThingDef ParentName="StoneBlocksBase">
-    <defName>DriedMudBrick</defName>
+    <defName>N7_DriedMudbrick</defName>
     <label>mud brick</label>
-    <description>Bricks made of mud with straw as a binder. Cheap and fireproof, but not particularly strong and somewhat ugly.</description>
+    <description>Bricks made of mud, with straw as a binder. Cheap and fireproof, but not particularly strong and somewhat ugly.</description>
     <graphicData>
       <texPath>Things/Item/DriedMudBrick</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -130,6 +253,7 @@
     <stuffProps>
       <categories Inherit="false">
         <li>Masonry</li>
+        <li>Stony</li>		
       </categories>	
       <color>(162,152,121)</color>
       <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
@@ -137,10 +261,14 @@
       <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
       <stuffAdjective>mudbrick</stuffAdjective>
       <statFactors>
-        <Beauty>-2</Beauty>  
-        <MaxHitPoints>0.6</MaxHitPoints>
-				<WorkToBuild>2</WorkToBuild>
-				<WorkToMake>0.8</WorkToMake>
+			<MarketValue>0.2</MarketValue>
+			<Flammability>0</Flammability>
+			<BedRestEffectiveness>0.9</BedRestEffectiveness>
+			<MeleeWeapon_CooldownMultiplier>1.10</MeleeWeapon_CooldownMultiplier>	  
+			<Beauty>-1</Beauty>  
+			<MaxHitPoints>0.5</MaxHitPoints>
+			<WorkToBuild>2</WorkToBuild>
+			<WorkToMake>0.85</WorkToMake>
       </statFactors>
       <smeltable>false</smeltable>	  
     </stuffProps>
@@ -148,7 +276,7 @@
 
   <!--=============== Unfired Brick ====================-->
   <ThingDef ParentName="ResourceBase">
-    <defName>UnfiredBrick</defName>
+    <defName>N7_UnfiredBrick</defName>
     <label>unfired brick</label>
     <description>Fresh clay formed into a rough brick. It will need to be fired before it's of any use.</description>
     <graphicData>
@@ -165,13 +293,14 @@
 
 	<RecipeDef ParentName="MakeStoneBlocksBase">
 		<defName>Make_RawBricks</defName>
-		<label>make mud bricks</label>
-		<description>shape hay and clay into mud bricks.</description>
+		<label>make bricks</label>
+		<description>Shape clay into unfired ceramic bricks.</description>
+		<jobString>Shaping bricks.</jobString>			
 		<ingredients>
 			<li>
 			<filter>
 				<thingDefs>
-					<li>RawClay</li>
+					<li>N7_RawClay</li>
 				</thingDefs>
 			</filter>
 			<count>50</count>
@@ -179,7 +308,7 @@
 			<li>
 			<filter>
 				<thingDefs>
-					<li>Sand</li>
+					<li>N7_Sand</li>
 				</thingDefs>
 			</filter>
 			<count>20</count>
@@ -187,28 +316,29 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>Sand</li>			
-				<li>RawClay</li>
+				<li>N7_Sand</li>			
+				<li>N7_RawClay</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<workAmount>600</workAmount>
     <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
 		<effectWorking>CutStone</effectWorking>
-		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+		<soundWorking>Interact_ConstructDirt</soundWorking>
 		<targetCountAdjustment>35</targetCountAdjustment>
 		<recipeUsers>
 			<li>CraftingSpot</li>
 			<li>CeramicsBench_Basic</li>	
 			<li>CeramicsBench_Electric</li>			
-		</recipeUsers>		
+		</recipeUsers>
+		<researchPrerequisite>PrimitiveCeramics</researchPrerequisite>			
 		<products>
-			<UnfiredBrick>35</UnfiredBrick>
+			<N7_UnfiredBrick>35</N7_UnfiredBrick>
 		</products>
 	</RecipeDef>
 
   <!--=============== Fired Brick ====================-->
   <ThingDef ParentName="StoneBlocksBase">
-    <defName>FiredBrick</defName>
+    <defName>N7_FiredBrick</defName>
     <label>brick</label>
     <description>Fired clay bricks made of clay and sand to reduce shrinkage. Economical and fireproof, they make for a sturdy if plain-looking building material.</description>
     <graphicData>
@@ -222,6 +352,7 @@
     <stuffProps>
       <categories Inherit="false">
         <li>Masonry</li>
+        <li>Stony</li>		
       </categories>		
       <color>(177,110,96)</color>
       <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
@@ -229,10 +360,14 @@
       <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
       <stuffAdjective>brick</stuffAdjective>
       <statFactors>
-        <Beauty>1</Beauty>  
-        <MaxHitPoints>1.5</MaxHitPoints>
-				<WorkToBuild>4</WorkToBuild>
-				<WorkToMake>1.1</WorkToMake>
+			<MarketValue>0.2</MarketValue>
+			<Flammability>0</Flammability>
+			<BedRestEffectiveness>0.9</BedRestEffectiveness>
+			<MeleeWeapon_CooldownMultiplier>1.10</MeleeWeapon_CooldownMultiplier>	  
+			<Beauty>0.1</Beauty>  
+			<MaxHitPoints>1.5</MaxHitPoints>
+			<WorkToBuild>4</WorkToBuild>
+			<WorkToMake>1.1</WorkToMake>
       </statFactors>
       <smeltable>false</smeltable>	  
     </stuffProps>
@@ -240,9 +375,9 @@
 
   <!--=============== Hardened Ceramic ====================-->
   <ThingDef ParentName="ResourceBase">
-    <defName>HardenedCeramic</defName>
+    <defName>N7_HardenedCeramic</defName>
     <label>hardened ceramic</label>
-    <description>An ingot of incredibly hard ceramic, historically used in ballistic armor and extremely sharp blades. While lighter than steel, its hardness makes it somewhat brittle.</description>
+    <description>An ingot of incredibly hard ceramic, historically used in ballistic armor. It can be used as a substitue for steel in many cases, though its hardness makes it somewhat brittle.</description>
     <graphicData>
       <texPath>Things/Item/HardenedCeramic</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -250,14 +385,15 @@
     <soundInteract>ChunkRock_Drop</soundInteract>
     <soundDrop>ChunkRock_Drop</soundDrop>
     <statBases>
+      <MaxHitPoints>100</MaxHitPoints>	
       <MarketValue>4.5</MarketValue>
-      <Mass>0.02</Mass>
-      <StuffPower_Armor_Sharp>1.2</StuffPower_Armor_Sharp>
-      <StuffPower_Armor_Blunt>0.4</StuffPower_Armor_Blunt>
-      <StuffPower_Armor_Heat>0.8</StuffPower_Armor_Heat>
+      <Mass>0.05</Mass>
+      <StuffPower_Armor_Sharp>1</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.3</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.5</StuffPower_Armor_Heat>
       <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
       <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
-      <SharpDamageMultiplier>1.05</SharpDamageMultiplier>
+      <SharpDamageMultiplier>0.5</SharpDamageMultiplier>
       <BluntDamageMultiplier>0.5</BluntDamageMultiplier>
     </statBases>
     <useHitPoints>false</useHitPoints>
@@ -266,22 +402,279 @@
     </thingCategories>
     <stuffProps>
       <categories Inherit="false">
-        <li>Ceramic</li>
+        <li>Metallic</li>
       </categories>
-      <commonality>0.00</commonality>
+      <commonality>0.0</commonality>
       <constructEffect>ConstructMetal</constructEffect>
       <color>(69,67,67)</color>
-      <soundImpactStuff>BulletImpact_Stone</soundImpactStuff>
+      <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
       <statFactors>
-        <MaxHitPoints>1</MaxHitPoints>
-        <Beauty>-2</Beauty>
-        <Flammability>0</Flammability>
+		<MarketValue>1.05</MarketValue>
+		<Flammability>0</Flammability>
+		<BedRestEffectiveness>0.9</BedRestEffectiveness>
+		<MeleeWeapon_CooldownMultiplier>1.10</MeleeWeapon_CooldownMultiplier>	  
+		<MaxHitPoints>2</MaxHitPoints>
+		<WorkToBuild>6</WorkToBuild>
+		<WorkToMake>2</WorkToMake>	  
+		<Beauty>-2</Beauty>
       </statFactors>
       <smeltable>false</smeltable>
     </stuffProps>
   </ThingDef>
+
+	<RecipeDef ParentName="MakeStoneBlocksBase">
+		<defName>Make_HardenedCeramic</defName>
+		<label>Make 10 hardened ceramic ingots</label>
+		<description>Process raw materials into 10 ingots of high durability ceramic composite.</description>
+		<jobString>Manufacturing hardened ceramic ingots.</jobString>			
+		<ingredients>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>N7_RawClay</li>
+				</thingDefs>
+			</filter>
+			<count>40</count>
+			</li>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>N7_Sand</li>
+				</thingDefs>
+			</filter>
+			<count>30</count>
+			</li>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>Steel</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+			</li>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>Silver</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+			</li>				
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>N7_Sand</li>			
+				<li>N7_RawClay</li>
+				<li>Steel</li>					
+			</thingDefs>
+		</fixedIngredientFilter>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>				
+		<workAmount>4000</workAmount>
+		<workSkill>Crafting</workSkill>		
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<targetCountAdjustment>10</targetCountAdjustment>
+		<researchPrerequisite>AdvancedCeramics</researchPrerequisite>			
+		<recipeUsers>
+			<li>MaterialProcessor</li>
+		</recipeUsers>		
+		<products>
+			<N7_HardenedCeramic>10</N7_HardenedCeramic>
+		</products>
+		<skillRequirements>
+			<Crafting>5</Crafting>			
+		</skillRequirements>			
+	</RecipeDef>
  
+  <!--=============== Silica Wafer ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>N7_SilicaWafer</defName>
+    <label>silica wafer</label>
+    <description>A thin, fragile piece of semiconductor material, a raw resource in the production of microelectronics such as integrated circuits and solar cells.</description>
+    <graphicData>
+      <texPath>Things/Item/Wafer</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <!-- <soundInteract>ChunkRock_Drop</soundInteract> -->
+    <!-- <soundDrop>ChunkRock_Drop</soundDrop> -->
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>	
+      <MarketValue>6</MarketValue>
+      <Mass>0.01</Mass>
+      <DeteriorationRate>5</DeteriorationRate>	  	  
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <stuffProps>
+      <commonality>0.00</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(69,67,67)</color>
+      <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
+      <soundMeleeHitSharp>MetalHitImportant</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MetalHitImportant</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>0.1</MaxHitPoints>
+        <Beauty>0</Beauty>
+        <Flammability>0.1</Flammability>
+      </statFactors>
+      <smeltable>false</smeltable>
+    </stuffProps>
+  </ThingDef>
+
+	<RecipeDef ParentName="MakeStoneBlocksBase">
+		<defName>Make_Wafer</defName>
+		<label>Make 10 silica wafers</label>
+		<description>Process raw materials into 10 blank silica wafers.</description>
+		<jobString>Manufacturing silica wafers.</jobString>			
+		<ingredients>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>Silver</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+			</li>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>N7_Sand</li>
+				</thingDefs>
+			</filter>
+			<count>50</count>
+			</li>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>Steel</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+			</li>				
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>N7_Sand</li>			
+				<li>Steel</li>
+				<li>Silver</li>				
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workAmount>10000</workAmount>
+		<workSkill>Crafting</workSkill>		
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<targetCountAdjustment>10</targetCountAdjustment>
+		<researchPrerequisite>AdvancedCeramics</researchPrerequisite>				
+		<recipeUsers>
+			<li>MaterialProcessor</li>
+		</recipeUsers>		
+		<products>
+			<N7_SilicaWafer>10</N7_SilicaWafer>
+		</products>
+		<skillRequirements>
+			<Intellectual>7</Intellectual>
+			<Crafting>4</Crafting>			
+		</skillRequirements>		
+	</RecipeDef>
+ 
+  <!--=============== Porcelain ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>N7_Porcelain</defName>
+    <label>porcelain</label>
+    <description>A block of ceramic material with a distinct off-white color, reknowned for its beauty. It can be honed to a sharp edge, but its brittleness means it tends to chip. It is impervious to water and has a smooth finish, making it easier to clean than most other materials.</description>
+    <graphicData>
+      <texPath>Things/Item/Porcelain</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>ChunkRock_Drop</soundInteract>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <statBases>
+      <MarketValue>10</MarketValue>
+      <Mass>0.02</Mass>
+      <StuffPower_Armor_Sharp>0.5</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.3</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.8</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.025</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.5</BluntDamageMultiplier>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <stuffProps>
+      <categories Inherit="false">
+        <li>Stony</li>
+      </categories>
+      <stuffAdjective>porcelain</stuffAdjective>
+      <commonality>0.00</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(246,246,245)</color>
+      <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <statFactors>
+			<MarketValue>1.2</MarketValue>
+			<Flammability>0</Flammability>
+			<BedRestEffectiveness>0.9</BedRestEffectiveness>
+			<MeleeWeapon_CooldownMultiplier>1.30</MeleeWeapon_CooldownMultiplier>	  
+			<WorkToBuild>4</WorkToBuild>
+			<WorkToMake>1.1</WorkToMake>	  
+			<MaxHitPoints>0.4</MaxHitPoints>
+			<Beauty>3</Beauty>
+      </statFactors>
+      <smeltable>false</smeltable>
+    </stuffProps>
+  </ThingDef>
+
+	<RecipeDef ParentName="MakeStoneBlocksBase">
+		<defName>Make_Porcelian</defName>
+		<label>make porcelain</label>
+		<description>Shape sand and clay into porcelain bricks.</description>
+		<jobString>Making porcelain blocks.</jobString>			
+		<ingredients>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>N7_RawClay</li>
+				</thingDefs>
+			</filter>
+			<count>20</count>
+			</li>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>N7_Sand</li>
+				</thingDefs>
+			</filter>
+			<count>60</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>N7_Sand</li>			
+				<li>N7_RawClay</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workAmount>1500</workAmount>
+    <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+		<targetCountAdjustment>35</targetCountAdjustment>
+		<recipeUsers>
+			<li>CeramicsBench_Basic</li>	
+			<li>CeramicsBench_Electric</li>			
+		</recipeUsers>
+		<researchPrerequisite>BasicCeramics</researchPrerequisite>			
+		<products>
+			<N7_Porcelain>35</N7_Porcelain>
+		</products>
+	</RecipeDef>
  
 </Defs>
