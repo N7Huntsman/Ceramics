@@ -285,7 +285,7 @@
 				<maxSafeTemperature>60</maxSafeTemperature>
 				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
 			</li>		
-			<li Class="ExpandableFermenting.CompProperties_Processing">
+			<li Class="ExpandableFermenting.CompProperties_Fermenting">
 				<ingredientDef>N7_RawMudbrick</ingredientDef>
 				<productDef>N7_DriedMudbrick</productDef>			
 				<capacity>35</capacity>
