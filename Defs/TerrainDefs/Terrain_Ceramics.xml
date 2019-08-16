@@ -29,7 +29,7 @@
     <color>(246,246,245)</color>
     <statBases>
       <WorkToBuild>950</WorkToBuild>
-      <Beauty>0.8</Beauty>
+      <Beauty>2</Beauty>
       <Cleanliness>0.35</Cleanliness>	  
     </statBases>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>

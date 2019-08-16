@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+					<mods>
+						<li>Medieval Times</li>
+					</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+			<!-- Swap out Adobe Brick -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="MedTimes_StoragePot"]/costList/MedTimes_Resource_AdobeBricks</xpath>
+				<value>
+					<N7_RawClay>30</N7_RawClay>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="MedTimes_Ranged_MedievalGrenade"]/costList/MedTimes_Resource_AdobeBricks</xpath>
+				<value>
+					<N7_RawClay>15</N7_RawClay>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="MedTimes_DrinkingCup"]/stuffCategories</xpath>
+				<value>
+					<li>Clay</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="MedTimes_Resource_AdobeBricks"]</xpath>
+			</li>
+
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/RecipeDef[defName="MedTimes_MakeAdobeBricks"]</xpath>
+			</li>
+
+			<!-- Add Coal to Kiln Fuel -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Building_PrimitiveKiln"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+				<value>
+					<li>MedTimes_Resource_Coal</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Building_BasicKiln"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+				<value>
+					<li>MedTimes_Resource_Coal</li>
+				</value>
+			</li>
+
+			</operations>		
+		</match>
+	</Operation>
+	
+</Patch>

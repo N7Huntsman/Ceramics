@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+					<mods>
+						<li>[RF] Fertile Fields [1.0]</li>
+					</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="Make_FiberFromWood"]/products/N7_PlantFiber</xpath>
+				<value>
+					<N7_PlantFiber>20</N7_PlantFiber>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="Make_RawMudbricks"]/ingredients/li[1]/count</xpath>
+				<value>
+					<count>5</count>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="Make_RawMudbricks"]/ingredients/li[2]/count</xpath>
+				<value>
+					<count>5</count>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="Make_RawBricks"]/ingredients/li[1]/count</xpath>
+				<value>
+					<count>5</count>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="Make_RawBricks"]/ingredients/li[2]/count</xpath>
+				<value>
+					<count>5</count>
+				</value>
+			</li>
+
+			</operations>		
+		</match>
+	</Operation>
+	
+</Patch>

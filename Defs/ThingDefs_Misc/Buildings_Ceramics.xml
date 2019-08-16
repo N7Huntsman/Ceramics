@@ -237,7 +237,7 @@
       <li>PlaceWorker_ShowFacilitiesConnections</li>
     </placeWorkers>
     <researchPrerequisites>
-      <li>BasicCeramics</li>
+      <li>ImprovedCeramics</li>
       <li>Electricity</li>
     </researchPrerequisites>
   </ThingDef>  
@@ -288,9 +288,9 @@
 			<li Class="ExpandableFermenting.CompProperties_Processing">
 				<ingredientDef>N7_RawMudbrick</ingredientDef>
 				<productDef>N7_DriedMudbrick</productDef>			
-				<capacity>30</capacity>
+				<capacity>35</capacity>
 				<fermentationDuration>40000</fermentationDuration> 
-				<processFinishedLabel>Fired</processFinishedLabel>
+				<processFinishedLabel>Dry</processFinishedLabel>
 			</li>
 		</comps>			
     <tickerType>Rare</tickerType>
@@ -346,10 +346,13 @@
 				<productDef>N7_FiredBrick</productDef>			
 				<capacity>30</capacity>
 				<fermentationDuration>45000</fermentationDuration> 
-				<processFinishedLabel>Dried</processFinishedLabel>
+				<processFinishedLabel>Fired</processFinishedLabel>
 			</li>
 		</comps>			
     <tickerType>Normal</tickerType>
+    <researchPrerequisites>
+      <li>PrimitiveCeramics</li>
+    </researchPrerequisites>	
     <rotatable>true</rotatable>
     <designationCategory>Production</designationCategory>
   </ThingDef> 
@@ -402,12 +405,15 @@
 			<li Class="ExpandableFermenting.CompProperties_Processing">
 				<ingredientDef>N7_UnfiredBrick</ingredientDef>
 				<productDef>N7_FiredBrick</productDef>			
-				<capacity>30</capacity>
+				<capacity>50</capacity>
 				<fermentationDuration>40000</fermentationDuration> 
 				<processFinishedLabel>Fired</processFinishedLabel>
 			</li>
 		</comps>			
     <tickerType>Normal</tickerType>
+    <researchPrerequisites>
+      <li>BasicCeramics</li>
+    </researchPrerequisites>	
     <rotatable>true</rotatable>
     <designationCategory>Production</designationCategory>
   </ThingDef>
@@ -454,7 +460,7 @@
 			<li Class="ExpandableFermenting.CompProperties_Processing">
 				<ingredientDef>N7_UnfiredBrick</ingredientDef>
 				<productDef>N7_FiredBrick</productDef>			
-				<capacity>60</capacity>
+				<capacity>80</capacity>
 				<fermentationDuration>34000</fermentationDuration> 
 				<processFinishedLabel>Fired</processFinishedLabel>
 			</li>
@@ -462,9 +468,14 @@
 				<compClass>CompPowerTrader</compClass>
 				<shortCircuitInRain>true</shortCircuitInRain>
 				<basePowerConsumption>250</basePowerConsumption>
-			</li>			
+			</li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>			
 		</comps>			
     <tickerType>Rare</tickerType>
+    <researchPrerequisites>
+      <li>ImprovedCeramics</li>
+    </researchPrerequisites>	
     <rotatable>true</rotatable>
     <designationCategory>Production</designationCategory>
   </ThingDef>

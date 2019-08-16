@@ -43,7 +43,7 @@
 			<li>ClayGatheringSpot</li>			
 		</recipeUsers>
 	</RecipeDef>
-
+	
   <!--=============== Plant Fiber ====================-->
   <ThingDef ParentName="ResourceBase">
     <defName>N7_PlantFiber</defName>
@@ -105,7 +105,7 @@
 			<li>CraftingSpot</li>
 		</recipeUsers>		
 		<products>
-			<N7_PlantFiber>50</N7_PlantFiber>
+			<N7_PlantFiber>30</N7_PlantFiber>
 		</products>
 	</RecipeDef>
   
@@ -141,7 +141,7 @@
       <statFactors>
 			<MarketValue>0.6</MarketValue>
 			<Flammability>0</Flammability>
-			<Beauty>0.5</Beauty>  
+			<Beauty>0.6</Beauty>  
       </statFactors>
       <smeltable>false</smeltable>	  
     </stuffProps>	 
@@ -217,6 +217,7 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
+				<li>N7_RawClay</li>			
 				<li>N7_PlantFiber</li>
 			</thingDefs>
 		</fixedIngredientFilter>
@@ -270,6 +271,9 @@
 			<WorkToBuild>2</WorkToBuild>
 			<WorkToMake>0.85</WorkToMake>
       </statFactors>
+      <statOffsets>
+        <Beauty>-3</Beauty>
+      </statOffsets>		  
       <smeltable>false</smeltable>	  
     </stuffProps>
   </ThingDef>
@@ -369,6 +373,9 @@
 			<WorkToBuild>4</WorkToBuild>
 			<WorkToMake>1.1</WorkToMake>
       </statFactors>
+      <statOffsets>
+        <Beauty>0</Beauty>
+      </statOffsets>		  
       <smeltable>false</smeltable>	  
     </stuffProps>
   </ThingDef>
@@ -421,6 +428,9 @@
 		<Beauty>-2</Beauty>
       </statFactors>
       <smeltable>false</smeltable>
+      <statOffsets>
+        <Beauty>-3</Beauty>
+      </statOffsets>		  
     </stuffProps>
   </ThingDef>
 
@@ -629,16 +639,27 @@
 			<MaxHitPoints>0.4</MaxHitPoints>
 			<Beauty>3</Beauty>
       </statFactors>
+      <statOffsets>
+        <Beauty>3</Beauty>
+      </statOffsets>	  
       <smeltable>false</smeltable>
     </stuffProps>
   </ThingDef>
 
 	<RecipeDef ParentName="MakeStoneBlocksBase">
-		<defName>Make_Porcelian</defName>
+		<defName>Make_Porcelain</defName>
 		<label>make porcelain</label>
 		<description>Shape sand and clay into porcelain bricks.</description>
 		<jobString>Making porcelain blocks.</jobString>			
 		<ingredients>
+			<li>
+			<filter>
+				<thingDefs>
+					<li>N7_Sand</li>
+				</thingDefs>
+			</filter>
+			<count>60</count>
+			</li>		
 			<li>
 			<filter>
 				<thingDefs>
@@ -647,14 +668,6 @@
 			</filter>
 			<count>20</count>
 			</li>
-			<li>
-			<filter>
-				<thingDefs>
-					<li>N7_Sand</li>
-				</thingDefs>
-			</filter>
-			<count>60</count>
-			</li>			
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
