@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+					<mods>
+						<li>Concrete Walls</li>
+					</mods>
+		<match Class="PatchOperationFindMod">
+					<mods>
+						<li>[RF] Fertile Fields [1.0]</li>
+					</mods>
+					
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="MakeConcreteSlabBricks"]/ingredients</xpath>
+					<value>
+						  <li>
+							<filter>
+							  <thingDefs>
+									<li>SandPile</li>
+							  </thingDefs>
+							</filter>
+							<count>1</count>
+						  </li>					
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="MakeConcreteSlabBricks"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>SandPile</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="MakeConcreteSlabChunks"]/ingredients</xpath>
+					<value>
+						  <li>
+							<filter>
+							  <thingDefs>
+									<li>SandPile</li>
+							  </thingDefs>
+							</filter>
+							<count>2</count>
+						  </li>					
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="MakeConcreteSlabChunks"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>SandPile</li>
+					</value>
+				</li>
+
+				</operations>
+			</match>					
+		</match>			
+	</Operation>
+
+</Patch>

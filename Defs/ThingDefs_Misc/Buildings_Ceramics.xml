@@ -285,7 +285,7 @@
 				<maxSafeTemperature>60</maxSafeTemperature>
 				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
 			</li>		
-			<li Class="ExpandableFermenting.CompProperties_Processing">
+			<li Class="ExpandableFermenting.CompProperties_Fermenting">
 				<ingredientDef>N7_RawMudbrick</ingredientDef>
 				<productDef>N7_DriedMudbrick</productDef>			
 				<capacity>35</capacity>
@@ -341,13 +341,18 @@
 				</fuelFilter>
 				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
 			</li>			
-			<li Class="ExpandableFermenting.CompProperties_Fermenting">
+			<li Class="ExpandableFermenting.CompProperties_Processing">
 				<ingredientDef>N7_UnfiredBrick</ingredientDef>
 				<productDef>N7_FiredBrick</productDef>			
 				<capacity>30</capacity>
 				<fermentationDuration>45000</fermentationDuration> 
 				<processFinishedLabel>Fired</processFinishedLabel>
 			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>5</heatPerSecond>
+				<heatPushMaxTemperature>30</heatPushMaxTemperature>
+			</li>			
 		</comps>			
     <tickerType>Normal</tickerType>
     <researchPrerequisites>
@@ -409,6 +414,11 @@
 				<fermentationDuration>40000</fermentationDuration> 
 				<processFinishedLabel>Fired</processFinishedLabel>
 			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>3</heatPerSecond>
+				<heatPushMaxTemperature>25</heatPushMaxTemperature>
+			</li>					
 		</comps>			
     <tickerType>Normal</tickerType>
     <researchPrerequisites>
@@ -471,6 +481,11 @@
 			</li>
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Breakdownable"/>			
+	  <li Class="CompProperties_HeatPusher">
+		<compClass>CompHeatPusherPowered</compClass>
+		<heatPerSecond>2</heatPerSecond>
+		<heatPushMaxTemperature>20</heatPushMaxTemperature>
+	  </li>			  
 		</comps>			
     <tickerType>Rare</tickerType>
     <researchPrerequisites>

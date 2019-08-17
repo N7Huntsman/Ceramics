@@ -3,7 +3,7 @@
 
 	<RecipeDef ParentName="MakeStoneBlocksBase">
 		<defName>Make_ComponentsFromWafer</defName>
-		<label>Manufacture 10 compnents</label>
+		<label>Manufacture 10 components</label>
 		<description>Use silica wafers and steel to manufacture components.</description>
 		<ingredients>
 			<li>
@@ -36,7 +36,7 @@
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
 		<targetCountAdjustment>35</targetCountAdjustment>
-		<recipeUsers>
+		<recipeUsers inherit="false">
 			<li>TableMachining</li>
 		</recipeUsers>		
 		<products>
