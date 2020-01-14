@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+					<mods>
+						<li>Combat Extended</li>
+					</mods>
+					
+			<match Class="PatchOperationSequence">
+				<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="N7_Sand"]/statBases</xpath>
+					<value>
+						<Bulk>0.03</Bulk>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="N7_RawClay"]/statBases</xpath>
+					<value>
+						<Bulk>0.05</Bulk>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="N7_PlantFiber"]/statBases</xpath>
+					<value>
+						<Bulk>0.04</Bulk>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="N7_SilicaWafer"]/statBases</xpath>
+					<value>
+						<Bulk>0.1</Bulk>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="N7_HardenedCeramic"]/statBases</xpath>
+					<value>
+						<Bulk>0.4</Bulk>
+					</value>
+				</li>
+				</operations>
+		</match>
+	</Operation>
+
+</Patch>

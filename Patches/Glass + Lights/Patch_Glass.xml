@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+				<mods>
+					<li>Glass+Lights</li>
+				</mods>
+		<match Class="PatchOperationSequence">
+				<operations>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeGlass"]/ingredients</xpath>
+					<value>
+					<ingredients>					
+						  <li>
+							<filter>
+							  <thingDefs>
+									<li>N7_Sand</li>
+							  </thingDefs>
+							</filter>
+							<count>40</count>
+						  </li>
+					</ingredients>							  
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeGlass"]/fixedIngredientFilter</xpath>
+					<value>
+						<fixedIngredientFilter>					
+							<thingDefs>
+								<li>N7_Sand</li>
+							</thingDefs>
+						</fixedIngredientFilter>							
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeCircularGlass"]/ingredients</xpath>
+					<value>
+					<ingredients>					
+						  <li>
+							<filter>
+							  <thingDefs>
+									<li>N7_Sand</li>
+							  </thingDefs>
+							</filter>
+							<count>40</count>
+						  </li>
+					</ingredients>							  
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeCircularGlass"]/fixedIngredientFilter</xpath>
+					<value>
+						<fixedIngredientFilter>					
+							<thingDefs>
+								<li>N7_Sand</li>
+							</thingDefs>
+						</fixedIngredientFilter>							
+					</value>
+				</li>
+
+				</operations>		
+		</match>
+	</Operation>
+
+</Patch>

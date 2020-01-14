@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+					<mods>
+						<li>[RF] Concrete [1.0]</li>
+					</mods>
+		<match Class="PatchOperationFindMod">
+					<mods>
+						<li>[RF] Fertile Fields [1.0]</li>
+					</mods>
+					
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="BrickEmbrasure"]/costList</xpath>
+					<value>
+						<costStuffCount>25</costStuffCount>
+						<stuffCategories>
+						  <li>Metallic</li>
+						  <li>Woody</li>
+						  <li>Stony</li>
+						  <li>Brick</li>
+						  <li>Masonry</li>
+						  <li>Ceramic</li>							  
+						</stuffCategories>						
+					</value>
+				</li>	
+				</operations>
+			</match>					
+		</match>			
+	</Operation>
+
+</Patch>

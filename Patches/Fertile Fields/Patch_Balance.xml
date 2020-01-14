@@ -8,10 +8,18 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 
+		<!-- Because Fertile Fields uses relatively small quanties of teraforming resources, some stuff has to be adjusted. -->
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/RecipeDef[defName="Make_FiberFromWood"]/products/N7_PlantFiber</xpath>
 				<value>
 					<N7_PlantFiber>20</N7_PlantFiber>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="MineableClay"]/building/mineableYield</xpath>
+				<value>
+					<mineableYield>5</mineableYield>
 				</value>
 			</li>
 
