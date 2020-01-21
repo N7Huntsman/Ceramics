@@ -20,5 +20,15 @@
     <defName>Fiber</defName>
     <label>fiber</label>
   </StuffCategoryDef>
+
+  <StuffCategoryDef>
+    <defName>Mosaic</defName>
+    <label>mosaic</label>
+  </StuffCategoryDef>
+ 
+   <ThingCategoryDef>
+    <defName>Fiber</defName>
+    <label>fiber</label>
+  </ThingCategoryDef>
  
 </Defs>

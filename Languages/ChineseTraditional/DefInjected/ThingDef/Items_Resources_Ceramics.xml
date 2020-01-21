@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Sand -->
+
+  <N7_Sand.label>沙子</N7_Sand.label>
+  <N7_Sand.description>隨處可見的黃沙，它是陶瓷產品生產中的一個重要組成部分。</N7_Sand.description>
+
+
+  <!-- Plant Fiber -->
+
+  <N7_PlantFiber.label>植物纖維</N7_PlantFiber.label>
+  <N7_PlantFiber.description>粗糙的植物物質，在制黏土磚時是一種有用的黏合劑。</N7_PlantFiber.description>
+  <N7_PlantFiber.stuffProps.stuffAdjective>植物纖維</N7_PlantFiber.stuffProps.stuffAdjective>
+
+
+  <!-- Raw Clay -->
+
+  <N7_RawClay.label>黏土</N7_RawClay.label>
+  <N7_RawClay.description>細粒岩石和水的混合物，是一種可塑的建築材料，可以製成不同形狀的物品。</N7_RawClay.description>
+  <N7_RawClay.stuffProps.stuffAdjective>黏土</N7_RawClay.stuffProps.stuffAdjective>
+
+
+  <!-- Wet Mudbrick -->
+
+  <N7_RawMudbrick.label>濕泥磚</N7_RawMudbrick.label>
+  <N7_RawMudbrick.description>黏土粗糙製成的磚。要先烘乾才能使用。</N7_RawMudbrick.description>
+
+
+  <!-- Dried Mud Brick -->
+
+  <N7_DriedMudbrick.label>泥磚</N7_DriedMudbrick.label>
+  <N7_DriedMudbrick.description>泥磚，用稻草爲粘合劑。既便宜又防火，但並不結實，而且有些難看。</N7_DriedMudbrick.description>
+  <N7_DriedMudbrick.stuffProps.stuffAdjective>泥磚</N7_DriedMudbrick.stuffProps.stuffAdjective>
+
+
+  <!-- Unfired Brick -->
+
+  <N7_UnfiredBrick.label>黏土磚</N7_UnfiredBrick.label>
+  <N7_UnfiredBrick.description>黏土粗糙製成的磚。要先燒製才能使用。</N7_UnfiredBrick.description>
+
+
+  <!-- Fired Brick -->
+
+  <N7_FiredBrick.label>燒結磚</N7_FiredBrick.label>
+  <N7_FiredBrick.description>用黏土和沙子燒製的燒結磚。既經濟又防火，它們是一種堅固但外觀普通的建築材料。</N7_FiredBrick.description>
+  <N7_FiredBrick.stuffProps.stuffAdjective>燒結磚</N7_FiredBrick.stuffProps.stuffAdjective>
+
+
+  <!-- Hardened Ceramic -->
+
+  <N7_HardenedCeramic.label>硬陶瓷</N7_HardenedCeramic.label>
+  <N7_HardenedCeramic.description>一種極其堅硬的陶瓷材料，歷史上用於製作防護裝甲。在許多情況下，它可以作爲鐵的替代品，雖然硬度高，但有點脆。</N7_HardenedCeramic.description>
+  <N7_HardenedCeramic.stuffProps.stuffAdjective>硬陶瓷</N7_HardenedCeramic.stuffProps.stuffAdjective>
+
+
+  <!-- Silica Wafer -->
+
+  <N7_SilicaWafer.label>硅晶片</N7_SilicaWafer.label>
+  <N7_SilicaWafer.description>一種薄而易碎的半導體材料，用於生產微電子器件，如集成電路和太陽能電池。</N7_SilicaWafer.description>
+  <N7_SilicaWafer.stuffProps.stuffAdjective>硅晶片</N7_SilicaWafer.stuffProps.stuffAdjective>
+
+
+  <!-- Porcelain -->
+
+  <N7_Porcelain.label>瓷磚</N7_Porcelain.label>
+  <N7_Porcelain.description>一種具有獨特的灰白色的陶瓷材料，因其美麗而聞名。它的邊緣可以被研磨的非常鋒利，但它十分脆弱易碎。這種材料不透水，表面光滑，比大多數材料更容易清洗。</N7_Porcelain.description>
+  <N7_Porcelain.stuffProps.stuffAdjective>瓷磚</N7_Porcelain.stuffProps.stuffAdjective>
+
+
+</LanguageData>

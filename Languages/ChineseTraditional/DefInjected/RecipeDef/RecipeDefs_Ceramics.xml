@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Make_ComponentsFromWafer.label>生產10單位電子零件</Make_ComponentsFromWafer.label>
+  <Make_ComponentsFromWafer.description>使用硅晶片和鋼鐵來製造元件。</Make_ComponentsFromWafer.description>
+  <Make_ComponentsFromWafer.jobString>製作電子零件中。</Make_ComponentsFromWafer.jobString>
+
+
+</LanguageData>

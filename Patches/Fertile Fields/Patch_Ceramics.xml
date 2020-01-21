@@ -8,24 +8,11 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 			
-			<!-- Allow Fiber to be made from Plant Scraps -->			
+			<!-- Allow plant scraps to be used to make mudbricks -->			
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/RecipeDef[defName="Make_FiberFromWood"]/ingredients/li[1]/filter/thingDefs</xpath>
+				<xpath>Defs/ThingDef[defName="PlantScraps"]/thingCategories</xpath>
 				<value>
-					<li>PlantScraps</li>
-				</value>
-			</li>
-
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/RecipeDef[defName="Make_FiberFromWood"]/fixedIngredientFilter/thingDefs</xpath>
-				<value>
-					<li>PlantScraps</li>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/RecipeDef[defName="Make_FiberFromWood"]/fixedIngredientFilter/thingDefs</xpath>
-				<value>
-					<li>PlantScraps</li>
+					<li>PlantMatter</li>
 				</value>
 			</li>
 			

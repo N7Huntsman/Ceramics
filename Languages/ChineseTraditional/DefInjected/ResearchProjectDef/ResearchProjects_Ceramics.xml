@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PrimitiveCeramics.label>C：黏土收集</PrimitiveCeramics.label>
+  <PrimitiveCeramics.description>把黏土收集起來，做成備用形狀儲存。</PrimitiveCeramics.description>
+
+  <BasicCeramics.label>C：製陶術</BasicCeramics.label>
+  <BasicCeramics.description>習得更好的工具和窯泥工作，並開始黏土雕塑的創作。</BasicCeramics.description>
+
+  <ImprovedCeramics.label>C：改進製陶術</ImprovedCeramics.label>
+  <ImprovedCeramics.description>獲得更好的工具和材料，以及更複雜工作與陶瓷類型，包括更大更有效的窯和瓷器。</ImprovedCeramics.description>
+
+  <AdvancedCeramics.label>C：先進製陶術</AdvancedCeramics.label>
+  <AdvancedCeramics.description>提供先進的電爐和加工單元，用於將材料提煉成先進的複合材料，如用於彈道創傷板和微電子學。</AdvancedCeramics.description>
+
+
+</LanguageData>

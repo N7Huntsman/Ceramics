@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Sand -->
+
+  <Collect50Sand.label>收集50单位沙子</Collect50Sand.label>
+  <Collect50Sand.description>收集50单位沙子</Collect50Sand.description>
+  <Collect50Sand.jobString>正在收集沙子。</Collect50Sand.jobString>
+
+
+  <!-- Plant Fiber -->
+
+  <Make_FiberFromWood.label>分解植物纤维</Make_FiberFromWood.label>
+  <Make_FiberFromWood.description>把木头或其他植物分解成松散的植物纤维。</Make_FiberFromWood.description>
+  <Make_FiberFromWood.jobString>正在分解植物纤维。</Make_FiberFromWood.jobString>
+
+
+  <!-- Raw Clay -->
+
+  <Collect25Clay.label>收集25单位粘土</Collect25Clay.label>
+  <Collect25Clay.description>收集25单位粘土，将其加工成有用的建筑材料。</Collect25Clay.description>
+  <Collect25Clay.jobString>正在收集粘土。</Collect25Clay.jobString>
+
+
+  <!-- Wet Mudbrick -->
+
+  <Make_RawMudbricks.label>制作湿泥砖</Make_RawMudbricks.label>
+  <Make_RawMudbricks.description>将粘土和植物纤维制成湿泥砖。</Make_RawMudbricks.description>
+  <Make_RawMudbricks.jobString>正在制作湿泥砖。</Make_RawMudbricks.jobString>
+
+
+  <!-- Unfired Brick -->
+
+  <Make_RawBricks.label>制作粘土砖</Make_RawBricks.label>
+  <Make_RawBricks.description>把粘土做成未烧制的粘土砖。</Make_RawBricks.description>
+  <Make_RawBricks.jobString>正在制作粘土砖。</Make_RawBricks.jobString>
+
+
+  <!-- Hardened Ceramic -->
+
+  <Make_HardenedCeramic.label>制作10块硬陶瓷</Make_HardenedCeramic.label>
+  <Make_HardenedCeramic.description>将原料加工成10单位高耐久性陶瓷复合材料。</Make_HardenedCeramic.description>
+  <Make_HardenedCeramic.jobString>正在制造硬陶瓷。</Make_HardenedCeramic.jobString>
+
+
+  <!-- Silica Wafer -->
+
+  <Make_Wafer.label>制作10块硅晶片</Make_Wafer.label>
+  <Make_Wafer.description>将原料加工成10块空白硅晶片。</Make_Wafer.description>
+  <Make_Wafer.jobString>正在生产硅晶片。</Make_Wafer.jobString>
+
+
+  <!-- Porcelain -->
+
+  <Make_Porcelain.label>烧制瓷砖</Make_Porcelain.label>
+  <Make_Porcelain.description>把沙子和粘土做成瓷砖。</Make_Porcelain.description>
+  <Make_Porcelain.jobString>正在烧制瓷砖。</Make_Porcelain.jobString>
+
+
+</LanguageData>

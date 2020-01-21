@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Make_ComponentsFromWafer.label>生产10单位零部件</Make_ComponentsFromWafer.label>
+  <Make_ComponentsFromWafer.description>使用硅晶片和钢铁来制造元件。</Make_ComponentsFromWafer.description>
+  <Make_ComponentsFromWafer.jobString>制作零部件中。</Make_ComponentsFromWafer.jobString>
+
+
+</LanguageData>

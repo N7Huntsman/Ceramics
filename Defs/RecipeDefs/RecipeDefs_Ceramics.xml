@@ -36,6 +36,7 @@
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
 		<targetCountAdjustment>35</targetCountAdjustment>
+		<researchPrerequisite>AdvancedCeramics</researchPrerequisite>			
 		<recipeUsers inherit="false">
 			<li>TableMachining</li>
 		</recipeUsers>		

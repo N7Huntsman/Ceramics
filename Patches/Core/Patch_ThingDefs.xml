@@ -31,6 +31,14 @@
 		</value>
 	</Operation>
 
+	<!-- Allow hay to be used to make mudbricks -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Hay"]/thingCategories</xpath>
+		<value>		
+			<li>PlantMatter</li>				
+		</value>
+	</Operation>
+
 	<!-- Expanded Fermenting - Conditional barrel replacement. -->
 	<Operation Class="PatchOperationFindMod">
 		<mods>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase" Name="MosaicBase" Abstract="True">
+    <thingClass>Building_Art</thingClass>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>Standable</passability>
+    <pathCost>0</pathCost>
+    <castEdgeShadows>false</castEdgeShadows>
+    <useHitPoints>false</useHitPoints>
+    <fillPercent>0</fillPercent>
+    <rotatable>false</rotatable>	
+    <statBases>
+      <Flammability>0</Flammability>
+			<SellPriceFactor>1.10</SellPriceFactor>
+    </statBases>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtSculpture</nameMaker>
+        <descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>Stonecutting</li>
+    </researchPrerequisites>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>	
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+	<designationCategory>Misc</designationCategory>	
+  </ThingDef>
+<!--
+  <ThingDef ParentName="MosaicBase">
+    <defName>Mosaic_Small</defName>
+    <label>small mosaic</label>
+    <description>A small mosaic image, made of materials laid carefully into the floor.</description>
+	<size>(1,1)</size>		
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+      <texPath>Things/Mosaic/Small</texPath>
+			<drawSize>(1,1)</drawSize>	  
+    </graphicData>
+    <fillPercent>0</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Beauty>50</Beauty>
+      <WorkToBuild>24000</WorkToBuild>
+    </statBases>
+    <stuffCategories>
+      <li>Mosaic</li>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+  </ThingDef>
+-->
+  <ThingDef ParentName="MosaicBase">
+    <defName>Mosaic_Medium</defName>
+    <label>large mosaic</label>
+    <description>A fairly large mosaic image, made of materials laid carefully into the floor.</description>
+	<size>(3,3)</size>		
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+      <texPath>Things/Mosaic/Medium</texPath>
+			<drawSize>(3,3)</drawSize>	  
+    </graphicData>
+    <fillPercent>0</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <Beauty>110</Beauty>
+      <WorkToBuild>48000</WorkToBuild>
+    </statBases>
+    <stuffCategories>
+      <li>Mosaic</li>
+    </stuffCategories>
+    <costStuffCount>100</costStuffCount>
+  </ThingDef>  
+<!--
+  <ThingDef ParentName="MosaicBase">
+    <defName>Mosaic_Large</defName>
+    <label>grand mosaic</label>
+    <description>An extremely large mosaic image, made of materials laid carefully into the floor.</description>
+	<size>(5,5)</size>		
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+      <texPath>Things/Mosaic/Large</texPath>
+			<drawSize>(5,5)</drawSize>	  
+    </graphicData>
+    <fillPercent>0</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <Beauty>220</Beauty>
+      <WorkToBuild>68000</WorkToBuild>
+    </statBases>
+    <stuffCategories>
+      <li>Mosaic</li>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+  </ThingDef> 
+ --> 
+</Defs>	

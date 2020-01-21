@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <FiredBrickFloor.label>燒製磚地板</FiredBrickFloor.label>
+  <FiredBrickFloor.description>燒製用於製作地板的磚石。這種地板比石磚便宜，但比石磚好看，在成本、實用性和外觀之間取得一個微妙的平衡。</FiredBrickFloor.description>
+
+  <PorcelainFloor.label>瓷磚地板</PorcelainFloor.label>
+  <PorcelainFloor.description>精心鋪設的瓷磚，光滑的白色瓷磚使地板非常美觀，並且易於清理。</PorcelainFloor.description>
+
+
+</LanguageData>

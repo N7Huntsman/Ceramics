@@ -339,7 +339,7 @@
 					<li>WoodLog</li>
 				  </thingDefs>
 				</fuelFilter>
-				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
 			</li>			
 			<li Class="ExpandableFermenting.CompProperties_Processing">
 				<ingredientDef>N7_UnfiredBrick</ingredientDef>
@@ -405,7 +405,7 @@
 					<li>WoodLog</li>
 				  </thingDefs>
 				</fuelFilter>
-				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
 			</li>			
 			<li Class="ExpandableFermenting.CompProperties_Processing">
 				<ingredientDef>N7_UnfiredBrick</ingredientDef>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <DoBillsCollectClay.label>收集黏土</DoBillsCollectClay.label>
+  <DoBillsCollectClay.verb>收集</DoBillsCollectClay.verb>
+  <DoBillsCollectClay.gerund>收集</DoBillsCollectClay.gerund>
+
+  <UnloadKiln.label>取出燒結磚</UnloadKiln.label>
+  <UnloadKiln.verb>取出</UnloadKiln.verb>
+  <UnloadKiln.gerund>取出</UnloadKiln.gerund>
+
+  <LoadKiln.label>乾燥濕泥磚/燒制黏土磚</LoadKiln.label>
+  <LoadKiln.verb>放入</LoadKiln.verb>
+  <LoadKiln.gerund>放入</LoadKiln.gerund>
+
+  <DoBillsCeramics.label>在陶瓷材料加工台上製作</DoBillsCeramics.label>
+  <DoBillsCeramics.verb>製作</DoBillsCeramics.verb>
+  <DoBillsCeramics.gerund>製作</DoBillsCeramics.gerund>
+
+
+</LanguageData>

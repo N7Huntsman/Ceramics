@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Clay Gathering Spot -->
+
+  <ClayGatheringSpot.label>黏土收集點</ClayGatheringSpot.label>
+  <ClayGatheringSpot.description>臨時搭建的收集點，可以讓殖民者在潮濕的地面收集黏土。</ClayGatheringSpot.description>
+  <ClayGatheringSpot_Blueprint.label>黏土收集點(藍圖)</ClayGatheringSpot_Blueprint.label>
+  <ClayGatheringSpot_Frame.label>黏土收集點(建造中)</ClayGatheringSpot_Frame.label>
+  <ClayGatheringSpot_Frame.description>臨時搭建的收集点，可以让殖民者在潮濕的地面收集黏土。</ClayGatheringSpot_Frame.description>
+
+
+  <!-- Clay Pit -->
+
+  <ClayPit.label>黏土坑</ClayPit.label>
+  <ClayPit.description>爲收集黏土而挖的淺坑，必須放置在乾燥的地面上。</ClayPit.description>
+  <ClayPit_Blueprint.label>黏土坑(藍圖)</ClayPit_Blueprint.label>
+  <ClayPit_Frame.label>黏土坑(建造中)</ClayPit_Frame.label>
+  <ClayPit_Frame.description>爲收集黏土而挖的淺坑，必須放置在乾燥的地面上。</ClayPit_Frame.description>
+
+
+  <!-- Ceramics Workbench -->
+
+  <CeramicsBench_Basic.label>黏土加工台</CeramicsBench_Basic.label>
+  <CeramicsBench_Basic.description>將黏土製成有用物品的工作台，包括一些基本的工具和一個小型的手工驅動的陶工旋盤。</CeramicsBench_Basic.description>
+  <CeramicsBench_Basic_Blueprint.label>黏土加工台(藍圖)</CeramicsBench_Basic_Blueprint.label>
+  <CeramicsBench_Basic_Blueprint_Install.label>黏土加工台(藍圖)</CeramicsBench_Basic_Blueprint_Install.label>
+  <CeramicsBench_Basic_Frame.label>黏土加工台(建造中)</CeramicsBench_Basic_Frame.label>
+  <CeramicsBench_Basic_Frame.description>將黏土製成有用物品的工作台，包括一些基本的工具和一個小型的手工驅動的陶工旋盤。</CeramicsBench_Basic_Frame.description>
+
+
+  <!-- Electric Ceramics Workbench -->
+
+  <CeramicsBench_Electric.label>電力黏土加工台</CeramicsBench_Electric.label>
+  <CeramicsBench_Electric.description>將黏土製成有用物品的工作台，包括許多工具和一個電動陶工旋盤。</CeramicsBench_Electric.description>
+  <CeramicsBench_Electric_Blueprint.label>電力黏土加工台(藍圖)</CeramicsBench_Electric_Blueprint.label>
+  <CeramicsBench_Electric_Blueprint_Install.label>電力黏土加工台(藍圖)</CeramicsBench_Electric_Blueprint_Install.label>
+  <CeramicsBench_Electric_Frame.label>電力黏土加工台(建造中)</CeramicsBench_Electric_Frame.label>
+  <CeramicsBench_Electric_Frame.description>將黏土製成有用物品的工作台，包括許多工具和一個電動陶工旋盤。</CeramicsBench_Electric_Frame.description>
+
+
+  <!-- Drying Rack -->
+
+  <Building_DryingRack.label>乾燥架</Building_DryingRack.label>
+  <Building_DryingRack.description>簡單的架設架子，用來烘乾濕泥磚。</Building_DryingRack.description>
+  <Building_DryingRack_Blueprint.label>乾燥架(藍圖)</Building_DryingRack_Blueprint.label>
+  <Building_DryingRack_Blueprint_Install.label>乾燥架(藍圖)</Building_DryingRack_Blueprint_Install.label>
+  <Building_DryingRack_Frame.label>乾燥架(建造中)</Building_DryingRack_Frame.label>
+  <Building_DryingRack_Frame.description>簡單的架設架子，用來烘乾濕泥磚。</Building_DryingRack_Frame.description>
+
+
+  <!-- Primitive Kiln -->
+
+  <Building_PrimitiveKiln.label>粗糙的窯爐</Building_PrimitiveKiln.label>
+  <Building_PrimitiveKiln.description>用於燒製磚石的窯，由於過於粗糙而低效。</Building_PrimitiveKiln.description>
+  <Building_PrimitiveKiln_Blueprint.label>粗糙的窯爐(藍圖)</Building_PrimitiveKiln_Blueprint.label>
+  <Building_PrimitiveKiln_Frame.label>粗糙的窯爐(建造中)</Building_PrimitiveKiln_Frame.label>
+  <Building_PrimitiveKiln_Frame.description>用於燒製磚石的窯，由於過於粗糙而低效。</Building_PrimitiveKiln_Frame.description>
+
+
+  <!-- Basic Kiln -->
+
+  <Building_BasicKiln.label>基礎窯爐</Building_BasicKiln.label>
+  <Building_BasicKiln.description>燒製陶瓷磚的窯爐，改進過後不再低效但也不快速。</Building_BasicKiln.description>
+  <Building_BasicKiln_Blueprint.label>基礎窯爐(藍圖)</Building_BasicKiln_Blueprint.label>
+  <Building_BasicKiln_Frame.label>基礎窯爐(建造中)</Building_BasicKiln_Frame.label>
+  <Building_BasicKiln_Frame.description>燒製陶瓷磚的窯爐，改進過後不再低效但也不快速。</Building_BasicKiln_Frame.description>
+
+
+  <!-- Electric Kiln -->
+
+  <Building_ElectricKiln.label>電力窯爐</Building_ElectricKiln.label>
+  <Building_ElectricKiln.description>燒製陶瓷的大型窯爐，使用電力能源並且高效。</Building_ElectricKiln.description>
+  <Building_ElectricKiln_Blueprint.label>電力窯爐(藍圖)</Building_ElectricKiln_Blueprint.label>
+  <Building_ElectricKiln_Frame.label>電力窯爐(建造中)</Building_ElectricKiln_Frame.label>
+  <Building_ElectricKiln_Frame.description>燒製陶瓷的大型窯爐，使用電力能源並且高效。</Building_ElectricKiln_Frame.description>
+
+
+  <!-- Material Processor -->
+
+  <MaterialProcessor.label>陶瓷材料加工台</MaterialProcessor.label>
+  <MaterialProcessor.description>一個多功能工作站，擁有先進的研磨機、熔爐和處理器，能夠將原材料轉換成先進的複合材料。</MaterialProcessor.description>
+  <MaterialProcessor_Blueprint.label>陶瓷材料加工台(藍圖)</MaterialProcessor_Blueprint.label>
+  <MaterialProcessor_Blueprint_Install.label>陶瓷材料加工台(藍圖)</MaterialProcessor_Blueprint_Install.label>
+  <MaterialProcessor_Frame.label>陶瓷材料加工台(建造中)</MaterialProcessor_Frame.label>
+  <MaterialProcessor_Frame.description>一個多功能工作站，擁有先進的研磨機、熔爐和處理器，能夠將原材料轉換成先進的複合材料。</MaterialProcessor_Frame.description>
+
+
+</LanguageData>
