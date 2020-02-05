@@ -2,34 +2,228 @@
 <Patch>
 
 	<Operation Class="PatchOperationFindMod">
-					<mods>
-						<li>[RF] Concrete [1.0]</li>
-					</mods>
-		<match Class="PatchOperationFindMod">
-					<mods>
-						<li>[RF] Fertile Fields [1.0]</li>
-					</mods>
-					
-			<match Class="PatchOperationSequence">
-				<operations>
-				
+		<mods>
+			<li>[RF] Concrete [1.0]</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="BrickEmbrasure"]/costList</xpath>
 					<value>
 						<costStuffCount>25</costStuffCount>
 						<stuffCategories>
-						  <li>Metallic</li>
-						  <li>Woody</li>
-						  <li>Stony</li>
-						  <li>Brick</li>
-						  <li>Masonry</li>
-						  <li>Ceramic</li>							  
-						</stuffCategories>						
+							<li>Metallic</li>
+							<li>Woody</li>
+							<li>Stony</li>
+							<li>Brick</li>
+							<li>Masonry</li>
+							<li>Ceramic</li>
+						</stuffCategories>
 					</value>
-				</li>	
-				</operations>
-			</match>					
-		</match>			
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeConcrete"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>CrushedRocks</li>
+									</thingDefs>
+								</filter>
+								<count>2</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>N7_Sand</li>
+									</thingDefs>
+								</filter>
+								<count>20</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>RFFCement</li>
+									</thingDefs>
+								</filter>
+								<count>1</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeConcrete"]/fixedIngredientFilter</xpath>
+					<value>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>CrushedRocks</li>
+								<li>N7_Sand</li>
+								<li>RFFCement</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeConcrete5"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>CrushedRocks</li>
+									</thingDefs>
+								</filter>
+								<count>10</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>N7_Sand</li>
+									</thingDefs>
+								</filter>
+								<count>100</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>RFFCement</li>
+									</thingDefs>
+								</filter>
+								<count>5</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeConcrete5"]/fixedIngredientFilter</xpath>
+					<value>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>CrushedRocks</li>
+								<li>N7_Sand</li>
+								<li>RFFCement</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeConcreteRM"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>CrushedRocks</li>
+									</thingDefs>
+								</filter>
+								<count>2</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>N7_Sand</li>
+									</thingDefs>
+								</filter>
+								<count>20</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>RFFCement</li>
+									</thingDefs>
+								</filter>
+								<count>1</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeConcreteRM"]/fixedIngredientFilter</xpath>
+					<value>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>CrushedRocks</li>
+								<li>N7_Sand</li>
+								<li>RFFCement</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeConcrete5RM"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>CrushedRocks</li>
+									</thingDefs>
+								</filter>
+								<count>10</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>N7_Sand</li>
+									</thingDefs>
+								</filter>
+								<count>100</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>RFFCement</li>
+									</thingDefs>
+								</filter>
+								<count>5</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeConcrete5RM"]/fixedIngredientFilter</xpath>
+					<value>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>CrushedRocks</li>
+								<li>N7_Sand</li>
+								<li>RFFCement</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeSandSlow"]/products</xpath>
+					<value>
+						<products>
+							<N7_Sand>10</N7_Sand>
+						</products>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeSand"]/products</xpath>
+					<value>
+						<products>
+							<N7_Sand>10</N7_Sand>
+						</products>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeSand5"]/products</xpath>
+					<value>
+						<products>
+							<N7_Sand>50</N7_Sand>
+						</products>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="SandPile"]</xpath>
+				</li>
+			</operations>
+		</match>
 	</Operation>
 
 </Patch>
