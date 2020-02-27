@@ -1,0 +1,13 @@
+D:\Games\Steam\steamapps\common\RimWorld\Mods\ExpandableFermenting\Source\ExpandableFermenting\obj\Release\ExpandableFermenting.csprojResolveAssemblyReference.cache
+D:\Games\Steam\steamapps\common\RimWorld\Mods\ExpandableFermenting\Assemblies\ExpandableFermenting.dll
+D:\Games\Steam\steamapps\common\RimWorld\Mods\ExpandableFermenting\Source\ExpandableFermenting\obj\Release\ExpandableFermenting.dll
+D:\Games\Steam\steamapps\common\RimWorld\Mods\ExpandableFermenting_1_0\Source\ExpandableFermenting\obj\Release\ExpandableFermenting.dll
+D:\Games\Steam\steamapps\common\RimWorld\Mods\ExpandableFermenting_1_0\Assemblies\ExpandableFermenting.dll
+D:\Games\Steam\steamapps\common\RimWorld\Mods\ExpandableFermenting_1_0\Source\ExpandableFermenting\obj\Release\ExpandableFermenting.csprojResolveAssemblyReference.cache
+D:\Games\Steam\steamapps\common\RimWorld\Mods\ExpandableFermenting_0_19\Source\ExpandableFermenting\obj\Release\ExpandableFermenting.dll
+D:\Games\Steam\steamapps\common\RimWorld\Mods\ExpandableFermenting_0_19\Assemblies\ExpandableFermenting.dll
+G:\Steam Games\steamapps\common\RimWorld\Mods\1 - Ceramics\Source\ExpandableFermenting\obj\Release\ExpandableFermenting.csprojAssemblyReference.cache
+G:\Steam Games\steamapps\common\RimWorld\Mods\1 - Ceramics\Source\ExpandableFermenting\obj\Release\ExpandableFermenting.csproj.CoreCompileInputs.cache
+G:\Steam Games\steamapps\common\RimWorld\Mods\1 - Ceramics\Source\ExpandableFermenting\obj\Release\ExpandableFermenting.dll
+G:\Steam Games\steamapps\common\RimWorld\Mods\1 - Ceramics\Assemblies\ExpandableFermenting.dll
+G:\Steam Games\steamapps\common\RimWorld\Mods\1 - Ceramics\Source\ExpandableFermenting\obj\Release\ExpandableFermenting.csproj.CopyComplete

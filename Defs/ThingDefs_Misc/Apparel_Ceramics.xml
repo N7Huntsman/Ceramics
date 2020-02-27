@@ -6,7 +6,7 @@
   <ThingDef ParentName="ArmorHelmetMakeableBase">
     <defName>Apparel_CombatHelmet</defName>
     <label>combat helmet</label>
-    <description>A lightweight helmet made of reinforced ceramic composite, designed to protect the head. While the design has an open face, panels along the sides protect the jaw.</description>
+    <description>A lightweight helmet made of reinforced ceramic composite, designed to protect the head from projectiles and blunt impacts.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
       <researchPrerequisite>AdvancedCeramics</researchPrerequisite>	

@@ -32,7 +32,7 @@
 		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>		
 		<workAmount>6000</workAmount>
 		<workSkill>Crafting</workSkill>		
-		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
 		<targetCountAdjustment>35</targetCountAdjustment>

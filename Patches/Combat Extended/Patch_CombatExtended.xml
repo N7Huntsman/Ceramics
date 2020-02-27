@@ -42,6 +42,42 @@
 						<Bulk>0.4</Bulk>
 					</value>
 				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="N7_HardenedCeramic"]/statBases/StuffPower_Armor_Sharp</xpath>
+					<value>
+						<StuffPower_Armor_Sharp>2</StuffPower_Armor_Sharp>
+					</value>
+				</li>				
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="N7_HardenedCeramic"]/statBases/StuffPower_Armor_Blunt</xpath>
+					<value>
+						<StuffPower_Armor_Blunt>1.1</StuffPower_Armor_Blunt>
+					</value>
+				</li>	
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="N7_HardenedCeramic"]/stuffProps/categories</xpath>
+					<value>
+						<li>Steeled</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Apparel_CombatHelmet"]/statBases/ArmorRating_Sharp</xpath>
+					<value>
+					<ArmorRating_Sharp>9</ArmorRating_Sharp>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Apparel_CombatHelmet"]/statBases/ArmorRating_Blunt</xpath>
+					<value>
+					<ArmorRating_Blunt>16</ArmorRating_Blunt>
+					</value>
+				</li>
+				
 				</operations>
 		</match>
 	</Operation>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <WorkGiverDef>
+    <defName>DoBillsCollectClay</defName>
+    <label>gather clay</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Mining</workType>
+    <priorityInType>90</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ClayPit</li>
+      <li>ClayGatheringSpot</li>	  
+    </fixedBillGiverDefs>
+    <verb>gather</verb>
+    <gerund>gathering</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+	<defName>UnloadKiln</defName>
+	<label>unload ceramics</label>
+	<giverClass>Ceramics.WorkGiver_TakeProductOutOfProcessingBuilding</giverClass>
+	<workType>Hauling</workType>
+	<verb>unload</verb>
+	<gerund>unloading from</gerund>
+	<priorityInType>20</priorityInType>
+	<requiredCapacities>
+		<li>Manipulation</li>
+	</requiredCapacities>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+	<defName>LoadKiln</defName>
+	<label>load wet or unfired ceramics</label>
+	<giverClass>Ceramics.WorkGiver_FillProcessingBuilding</giverClass>
+	<workType>Hauling</workType>
+	<verb>load</verb>
+	<gerund>loading</gerund>
+	<priorityInType>19</priorityInType>
+	<requiredCapacities>
+		<li>Manipulation</li>
+	</requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsCeramics</defName>
+    <label>make things at ceramics workstations</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>101</priorityInType>
+    <fixedBillGiverDefs>
+      <li>CeramicsBench_Basic</li>
+      <li>CeramicsBench_Electric</li>	  
+      <li>MaterialProcessor</li>	  	  
+    </fixedBillGiverDefs>
+    <verb>craft</verb>
+    <gerund>crafting at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+</Defs>

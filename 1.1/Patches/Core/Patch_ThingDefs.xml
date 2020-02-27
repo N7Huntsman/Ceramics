@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<!-- Allow art to be made from clay. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="SculptureBase"]</xpath>
+		<value>
+			<stuffCategories>		
+				<li>Clay</li>
+			</stuffCategories>				
+		</value>
+	</Operation>
+
+	<!-- Select what materials mosaics can be made from. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[
+				defName="Silver" or 
+				defName="Gold" or
+				defName="Steel" or
+				defName="Jade"]/stuffProps/categories</xpath>
+		<value>		
+			<li>Mosaic</li>				
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="StoneBlocksBase"]/stuffProps/categories</xpath>
+		<value>		
+			<li>Mosaic</li>				
+		</value>
+	</Operation>
+
+	<!-- Allow hay to be used to make mudbricks -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Hay"]/thingCategories</xpath>
+		<value>		
+			<li>PlantMatter</li>				
+		</value>
+	</Operation>
+	
+</Patch>

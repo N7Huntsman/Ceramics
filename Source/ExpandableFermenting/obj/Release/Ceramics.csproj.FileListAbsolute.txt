@@ -1,0 +1,4 @@
+G:\Steam Games\steamapps\common\RimWorld\Mods\1 - Ceramics\Source\ExpandableFermenting\obj\Release\Ceramics.csproj.CoreCompileInputs.cache
+G:\Steam Games\steamapps\common\RimWorld\Mods\1 - Ceramics\Source\ExpandableFermenting\obj\Release\Ceramics.csprojAssemblyReference.cache
+G:\Steam Games\steamapps\common\RimWorld\Mods\1 - Ceramics\Assemblies\Ceramics.dll
+G:\Steam Games\steamapps\common\RimWorld\Mods\1 - Ceramics\Source\ExpandableFermenting\obj\Release\Ceramics.dll

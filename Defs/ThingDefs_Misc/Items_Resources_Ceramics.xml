@@ -144,8 +144,8 @@
 			<Flammability>0</Flammability>
 			<Beauty>0.7</Beauty>  
       </statFactors>
-      <smeltable>false</smeltable>	  
-    </stuffProps>	 
+    </stuffProps>	
+    <smeltable>false</smeltable>	  	
     <deepCommonality>0.1</deepCommonality>
     <deepCountPerPortion>70</deepCountPerPortion>
     <deepLumpSizeRange>
@@ -303,8 +303,8 @@
 			<WorkToBuild>2</WorkToBuild>
 			<WorkToMake>0.85</WorkToMake>
       </statFactors>  
-      <smeltable>false</smeltable>	  
     </stuffProps>
+    <smeltable>false</smeltable>	  	
   </ThingDef>
 
   <!--=============== Unfired Brick ====================-->
@@ -405,8 +405,8 @@
       <statOffsets>
         <Beauty>1</Beauty>
       </statOffsets>		  
-      <smeltable>false</smeltable>	  
     </stuffProps>
+    <smeltable>false</smeltable>	  	
   </ThingDef>
 
   <!--=============== Hardened Ceramic ====================-->
@@ -456,11 +456,11 @@
 		<WorkToMake>2</WorkToMake>	  
 		<Beauty>0.5</Beauty>
       </statFactors>
-      <smeltable>false</smeltable>
       <statOffsets>
         <Beauty>-5</Beauty>
       </statOffsets>		  
     </stuffProps>
+    <smeltable>false</smeltable>	
   </ThingDef>
 
 	<RecipeDef ParentName="MakeStoneBlocksBase">
@@ -512,7 +512,7 @@
 		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>				
 		<workAmount>4000</workAmount>
 		<workSkill>Crafting</workSkill>		
-		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
 		<targetCountAdjustment>10</targetCountAdjustment>
@@ -560,8 +560,8 @@
         <Beauty>0</Beauty>
         <Flammability>0.1</Flammability>
       </statFactors>
-      <smeltable>false</smeltable>
     </stuffProps>
+    <smeltable>false</smeltable>	
   </ThingDef>
 
 	<RecipeDef ParentName="MakeStoneBlocksBase">
@@ -604,7 +604,7 @@
 		</fixedIngredientFilter>
 		<workAmount>10000</workAmount>
 		<workSkill>Crafting</workSkill>		
-		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
 		<targetCountAdjustment>10</targetCountAdjustment>
@@ -633,7 +633,7 @@
     <soundInteract>ChunkRock_Drop</soundInteract>
     <soundDrop>ChunkRock_Drop</soundDrop>
     <statBases>
-      <MarketValue>10</MarketValue>
+      <MarketValue>3</MarketValue>
       <Mass>0.3</Mass>
       <StuffPower_Armor_Sharp>0.5</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.3</StuffPower_Armor_Blunt>
@@ -660,7 +660,7 @@
       <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
       <statFactors>
-			<MarketValue>1.2</MarketValue>
+			<MarketValue>1.3</MarketValue>
 			<Flammability>0</Flammability>
 			<BedRestEffectiveness>0.9</BedRestEffectiveness>
 			<MeleeWeapon_CooldownMultiplier>1.30</MeleeWeapon_CooldownMultiplier>	  
@@ -672,8 +672,8 @@
       <statOffsets>
         <Beauty>5</Beauty>
       </statOffsets>	  
-      <smeltable>false</smeltable>
     </stuffProps>
+    <smeltable>false</smeltable>	
   </ThingDef>
 
 	<RecipeDef ParentName="MakeStoneBlocksBase">

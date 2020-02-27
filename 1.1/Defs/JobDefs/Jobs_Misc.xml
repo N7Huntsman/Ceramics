@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<JobDef>
+		<defName>LoadProcessingBuilding</defName>
+		<driverClass>Ceramics.JobDriver_FillProcessingBuilding</driverClass>
+		<reportString>filling TargetA.</reportString>
+		<suspendable>false</suspendable>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	
+	<JobDef>
+		<defName>UnloadProcessingBuilding</defName>
+		<driverClass>Ceramics.JobDriver_TakeProductOutOfProcessingBuilding</driverClass>
+		<reportString>taking product out of TargetA.</reportString>
+		<suspendable>false</suspendable>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	
+</Defs>
