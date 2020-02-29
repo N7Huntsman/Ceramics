@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <FiredBrickFloor.label>レンガフローリング</FiredBrickFloor.label>
+  <FiredBrickFloor.description>レンガの床。石畳よりも安価で見た目が美しいためコスト、実用性、外観のバランスがとれています。</FiredBrickFloor.description>
+
+  <PorcelainFloor.label>ポーセラインタイル</PorcelainFloor.label>
+  <PorcelainFloor.description>注意深く置かれた滑らかな白いタイルは、魅力的で掃除しやすい床を作ります。</PorcelainFloor.description>
+
+
+</LanguageData>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Overwrite of base Fermenting barrel and expanded fermenting/processing framework by Eagle0600. -->
+
+  <!--[Core] <FermentingBarrel.label>ビア樽</FermentingBarrel.label>-->
+  <!--[Core] <FermentingBarrel.description>麦汁を発酵させてビールにするためのビア樽です.</FermentingBarrel.description>-->
+  <!--[Core] <FermentingBarrel_Blueprint.label>fermenting barrel (blueprint)</FermentingBarrel_Blueprint.label>-->
+  <!--[Core] <FermentingBarrel_Blueprint_Install.label>fermenting barrel (blueprint)</FermentingBarrel_Blueprint_Install.label>-->
+  <!--[Core] <FermentingBarrel_Frame.label>fermenting barrel (building)</FermentingBarrel_Frame.label>-->
+  <!--[Core] <FermentingBarrel_Frame.description>A barrel for fermenting raw wort into beer.</FermentingBarrel_Frame.description>-->
+
+
+</LanguageData>

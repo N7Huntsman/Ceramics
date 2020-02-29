@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Clay Gathering Spot -->
+
+  <ClayGatheringSpot.label>粘土採集所（湿）</ClayGatheringSpot.label>
+  <ClayGatheringSpot.description>粘土を湿った地面から収集する場所。</ClayGatheringSpot.description>
+  <ClayGatheringSpot_Blueprint.label>粘土採集所（湿）(設計)</ClayGatheringSpot_Blueprint.label>
+  <ClayGatheringSpot_Frame.label>粘土採集所（湿） (建設中)</ClayGatheringSpot_Frame.label>
+  <ClayGatheringSpot_Frame.description>粘土を湿った地面から収集する場所。</ClayGatheringSpot_Frame.description>
+
+
+  <!-- Clay Pit -->
+
+  <ClayPit.label>粘土採集所（乾）</ClayPit.label>
+  <ClayPit.description>粘土を収集する穴。乾燥した地面に設置する。</ClayPit.description>
+  <ClayPit_Blueprint.label>粘土採集所（乾）(設計)</ClayPit_Blueprint.label>
+  <ClayPit_Frame.label>c粘土採集所（乾） (建設中)</ClayPit_Frame.label>
+  <ClayPit_Frame.description>粘土を収集する穴。乾燥した地面に設置する。</ClayPit_Frame.description>
+
+
+  <!-- Ceramics Workbench -->
+
+  <CeramicsBench_Basic.label>セラミック作業台</CeramicsBench_Basic.label>
+  <CeramicsBench_Basic.description>粘土を形成するための作業台。いくつかの基本的なツールと、手動で作動する小型のろくろが含まれています。</CeramicsBench_Basic.description>
+  <CeramicsBench_Basic_Blueprint.label>セラミック作業台(設計)</CeramicsBench_Basic_Blueprint.label>
+  <CeramicsBench_Basic_Blueprint_Install.label>セラミック作業台(設計)</CeramicsBench_Basic_Blueprint_Install.label>
+  <CeramicsBench_Basic_Frame.label>セラミック作業台(建設中)</CeramicsBench_Basic_Frame.label>
+  <CeramicsBench_Basic_Frame.description>粘土を形成するための作業台。いくつかの基本的なツールと、手動で作動する小型のろくろが含まれています。</CeramicsBench_Basic_Frame.description>
+
+
+  <!-- Electric Ceramics Workbench -->
+
+  <CeramicsBench_Electric.label>電気式セラミック作業台</CeramicsBench_Electric.label>
+  <CeramicsBench_Electric.description>粘土を形成するための作業台。多数のツールと電動ろくろが含まれています。</CeramicsBench_Electric.description>
+  <CeramicsBench_Electric_Blueprint.label>電気式セラミック作業台 (設計)</CeramicsBench_Electric_Blueprint.label>
+  <CeramicsBench_Electric_Blueprint_Install.label>電気式セラミック作業台(設計)</CeramicsBench_Electric_Blueprint_Install.label>
+  <CeramicsBench_Electric_Frame.label>電気式セラミック作業台(建設中)</CeramicsBench_Electric_Frame.label>
+  <CeramicsBench_Electric_Frame.description>粘土を形成するための作業台。多数のツールと電動ろくろが含まれています。</CeramicsBench_Electric_Frame.description>
+
+
+  <!-- Drying Rack -->
+
+  <Building_DryingRack.label>乾燥ラック</Building_DryingRack.label>
+  <Building_DryingRack.description>泥レンガを乾燥させるためのラック。</Building_DryingRack.description>
+  <Building_DryingRack_Blueprint.label>乾燥ラック(設計)</Building_DryingRack_Blueprint.label>
+  <Building_DryingRack_Blueprint_Install.label>d乾燥ラック (設計)</Building_DryingRack_Blueprint_Install.label>
+  <Building_DryingRack_Frame.label>乾燥ラック(建設中)</Building_DryingRack_Frame.label>
+  <Building_DryingRack_Frame.description>泥レンガを乾燥させるためのラック。</Building_DryingRack_Frame.description>
+
+
+  <!-- Primitive Kiln -->
+
+  <Building_PrimitiveKiln.label>原始的な炉</Building_PrimitiveKiln.label>
+  <Building_PrimitiveKiln.description>レンガを焼くための原始的な炉。あまり効率は良くない。</Building_PrimitiveKiln.description>
+  <Building_PrimitiveKiln_Blueprint.label>原始的な炉 (設計)</Building_PrimitiveKiln_Blueprint.label>
+  <Building_PrimitiveKiln_Frame.label>原始的な炉 (建設中)</Building_PrimitiveKiln_Frame.label>
+  <Building_PrimitiveKiln_Frame.description>レンガを焼くための原始的な炉。あまり効率は良くない。</Building_PrimitiveKiln_Frame.description>
+
+
+  <!-- Basic Kiln -->
+
+  <Building_BasicKiln.label>基本的な炉</Building_BasicKiln.label>
+  <Building_BasicKiln.description>セラミックレンガを焼くためのシンプルな炉。</Building_BasicKiln.description>
+  <Building_BasicKiln_Blueprint.label>基本的な炉 (設計)</Building_BasicKiln_Blueprint.label>
+  <Building_BasicKiln_Frame.label>基本的な炉 (建設中)</Building_BasicKiln_Frame.label>
+  <Building_BasicKiln_Frame.description>セラミックレンガを焼くためのシンプルな炉。</Building_BasicKiln_Frame.description>
+
+
+  <!-- Electric Kiln -->
+
+  <Building_ElectricKiln.label>電気炉</Building_ElectricKiln.label>
+  <Building_ElectricKiln.description>セラミックレンガを焼くための大型電気炉。</Building_ElectricKiln.description>
+  <Building_ElectricKiln_Blueprint.label>電気炉 (設計)</Building_ElectricKiln_Blueprint.label>
+  <Building_ElectricKiln_Frame.label>電気炉 (建設中)</Building_ElectricKiln_Frame.label>
+  <Building_ElectricKiln_Frame.description>セラミックレンガを焼くための大型電気炉。</Building_ElectricKiln_Frame.description>
+
+
+  <!-- Material Processor -->
+
+  <MaterialProcessor.label>材料加工ベンチ</MaterialProcessor.label>
+  <MaterialProcessor.description>原料を高度な複合材料に変換できる高度な粉砕機、炉、およびプロセッサを備えたオールインワンワークステーション。</MaterialProcessor.description>
+  <MaterialProcessor_Blueprint.label>材料加工ベンチ (設計)</MaterialProcessor_Blueprint.label>
+  <MaterialProcessor_Blueprint_Install.label>材料加工ベンチ (設計)</MaterialProcessor_Blueprint_Install.label>
+  <MaterialProcessor_Frame.label>材料加工ベンチ (建設中)</MaterialProcessor_Frame.label>
+  <MaterialProcessor_Frame.description>原料を高度な複合材料に変換できる高度な粉砕機、炉、およびプロセッサを備えたオールインワンワークステーション。</MaterialProcessor_Frame.description>
+
+
+</LanguageData>

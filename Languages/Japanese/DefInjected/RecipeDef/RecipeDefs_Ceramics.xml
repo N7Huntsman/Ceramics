@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Make_ComponentsFromWafer.label>コンポーネントを10個作る</Make_ComponentsFromWafer.label>
+  <Make_ComponentsFromWafer.description>二酸化ケイ素ウエハーとスチールを使いコンポーネントを10個作ります。</Make_ComponentsFromWafer.description>
+  <Make_ComponentsFromWafer.jobString>岩塊を加工中</Make_ComponentsFromWafer.jobString>
+
+
+</LanguageData>

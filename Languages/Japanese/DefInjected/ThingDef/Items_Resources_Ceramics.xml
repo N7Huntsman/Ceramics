@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Sand -->
+
+  <N7_Sand.label>砂</N7_Sand.label>
+  <N7_Sand.description>どこにでもある砂の山。それでもセラミック製品の生産において重要です。</N7_Sand.description>
+
+
+  <!-- Plant Fiber -->
+
+  <N7_PlantFiber.label>繊維</N7_PlantFiber.label>
+  <N7_PlantFiber.description>荒い植物繊維。粘土レンガを作る時に有用です。</N7_PlantFiber.description>
+  <N7_PlantFiber.stuffProps.stuffAdjective>繊維</N7_PlantFiber.stuffProps.stuffAdjective>
+
+
+  <!-- Raw Clay -->
+
+  <N7_RawClay.label>粘土</N7_RawClay.label>
+  <N7_RawClay.description>微細な石と水の混合物。 一般的な建築資材を形作ることができます。</N7_RawClay.description>
+  <N7_RawClay.stuffProps.stuffAdjective>粘土</N7_RawClay.stuffProps.stuffAdjective>
+
+  <MineableClay.label>圧縮された粘土</MineableClay.label>
+  <MineableClay.description>密集した粘土の層。太古は川底や湖底だった。</MineableClay.description>
+
+  
+  <!-- Wet Mudbrick -->
+
+  <N7_RawMudbrick.label>湿った泥レンガ</N7_RawMudbrick.label>
+  <N7_RawMudbrick.description>新鮮な泥が未完成のレンガになりました。使う前に乾燥させてください。</N7_RawMudbrick.description>
+
+
+  <!-- Dried Mud Brick -->
+
+  <N7_DriedMudbrick.label>泥レンガ</N7_DriedMudbrick.label>
+  <N7_DriedMudbrick.description>泥で作られたレンガ。安価で対価性に優れますが耐久性は高くありません。</N7_DriedMudbrick.description>
+  <N7_DriedMudbrick.stuffProps.stuffAdjective>泥レンガ</N7_DriedMudbrick.stuffProps.stuffAdjective>
+
+
+  <!-- Unfired Brick -->
+
+  <N7_UnfiredBrick.label>未焼成レンガ</N7_UnfiredBrick.label>
+  <N7_UnfiredBrick.description>新鮮な粘土が未完成のレンガになりました。使う前に焼いてください。</N7_UnfiredBrick.description>
+
+
+  <!-- Fired Brick -->
+
+  <N7_FiredBrick.label>レンガ</N7_FiredBrick.label>
+  <N7_FiredBrick.description>焼かれたレンガ。 経済的で耐火性があり頑丈で見た目がよい建築材です。</N7_FiredBrick.description>
+  <N7_FiredBrick.stuffProps.stuffAdjective>レンガ</N7_FiredBrick.stuffProps.stuffAdjective>
+
+
+  <!-- Hardened Ceramic -->
+
+  <N7_HardenedCeramic.label>硬化セラミック</N7_HardenedCeramic.label>
+  <N7_HardenedCeramic.description>歴史的に弾道装甲で使用されている信じられないほど硬いセラミックのインゴット。多くの場合、鋼の代替品として使用できますが、多少脆くなっています。</N7_HardenedCeramic.description>
+  <N7_HardenedCeramic.stuffProps.stuffAdjective>硬化セラミック</N7_HardenedCeramic.stuffProps.stuffAdjective>
+
+
+  <!-- Silica Wafer -->
+
+  <N7_SilicaWafer.label>二酸化ケイ素ウエハー</N7_SilicaWafer.label>
+  <N7_SilicaWafer.description>薄くて壊れやすい半導体材料の断片。集積回路や太陽電池などのマイクロエレクトロニクスの生産における原材料。</N7_SilicaWafer.description>
+  <N7_SilicaWafer.stuffProps.stuffAdjective>二酸化ケイ素ウエハー</N7_SilicaWafer.stuffProps.stuffAdjective>
+
+
+  <!-- Porcelain -->
+
+  <N7_Porcelain.label>ポーセライン</N7_Porcelain.label>
+  <N7_Porcelain.description>美しさで知られる明確なオフホワイト色の磁器ブロック。耐久性はないですが水を通さず、滑らかな仕上がりで、他のほとんどの素材よりも簡単に掃除できます。</N7_Porcelain.description>
+  <N7_Porcelain.stuffProps.stuffAdjective>ポーセライン</N7_Porcelain.stuffProps.stuffAdjective>
+
+
+</LanguageData>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PrimitiveCeramics.label>粘土加工</PrimitiveCeramics.label>
+  <PrimitiveCeramics.description>粘土を収集し便利な形にします。</PrimitiveCeramics.description>
+
+  <BasicCeramics.label>セラミックス</BasicCeramics.label>
+  <BasicCeramics.description>粘土を加工するツールと炉。粘土の彫刻の作成も可能です。</BasicCeramics.description>
+
+  <ImprovedCeramics.label>改良されたセラミック</ImprovedCeramics.label>
+  <ImprovedCeramics.description>効率よくセラミックを加工するためのツールと炉。ポーセラインも。</ImprovedCeramics.description>
+
+  <AdvancedCeramics.label>先進的セラミック</AdvancedCeramics.label>
+  <AdvancedCeramics.description>高度な複合材料を精製するための電気炉や処理装置。</AdvancedCeramics.description>
+
+
+</LanguageData>

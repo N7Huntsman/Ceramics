@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Sand -->
+
+  <Collect50Sand.label>砂を50個集める</Collect50Sand.label>
+  <Collect50Sand.description>砂を50個採集します。</Collect50Sand.description>
+  <Collect50Sand.jobString>砂を収集中</Collect50Sand.jobString>
+
+
+  <!-- Plant Fiber -->
+
+  <Make_FiberFromWood.label>繊維を分解する</Make_FiberFromWood.label>
+  <Make_FiberFromWood.description>木材や植物を分解して繊維にします。</Make_FiberFromWood.description>
+  <Make_FiberFromWood.jobString>繊維に分解中</Make_FiberFromWood.jobString>
+
+
+  <!-- Raw Clay -->
+
+  <Collect25Clay.label>粘土を25個集める</Collect25Clay.label>
+  <Collect25Clay.description>粘土を25個採集し成型します。</Collect25Clay.description>
+  <Collect25Clay.jobString>粘土を収集中</Collect25Clay.jobString>
+
+
+  <!-- Wet Mudbrick -->
+
+  <Make_RawMudbricks.label>泥レンガを作る</Make_RawMudbricks.label>
+  <Make_RawMudbricks.description>粘土を繊維を使用し泥レンガを作成します。</Make_RawMudbricks.description>
+  <Make_RawMudbricks.jobString>泥レンガ作成中</Make_RawMudbricks.jobString>
+
+
+  <!-- Unfired Brick -->
+
+  <Make_RawBricks.label>レンガを作る</Make_RawBricks.label>
+  <Make_RawBricks.description>粘土を成型し未成型レンガを作成します。</Make_RawBricks.description>
+  <Make_RawBricks.jobString>レンガ成型中</Make_RawBricks.jobString>
+
+
+  <!-- Hardened Ceramic -->
+
+  <Make_HardenedCeramic.label>硬化セラミックインゴットを10個作る</Make_HardenedCeramic.label>
+  <Make_HardenedCeramic.description>硬化セラミックインゴットを10個作成します。</Make_HardenedCeramic.description>
+  <Make_HardenedCeramic.jobString>硬化セラミックインゴットを作成中</Make_HardenedCeramic.jobString>
+
+
+  <!-- Silica Wafer -->
+
+  <Make_Wafer.label>二酸化ケイ素ウエハーを10個作る</Make_Wafer.label>
+  <Make_Wafer.description>酸化ケイ素ウエハーを10個作成します。</Make_Wafer.description>
+  <Make_Wafer.jobString>酸化ケイ素ウエハー作成中</Make_Wafer.jobString>
+
+
+  <!-- Porcelain -->
+
+  <Make_Porcelain.label>ポーセラインを作る</Make_Porcelain.label>
+  <Make_Porcelain.description>砂と粘土からポーセラインを作成します。</Make_Porcelain.description>
+  <Make_Porcelain.jobString>ポーセライン作成中</Make_Porcelain.jobString>
+
+
+</LanguageData>

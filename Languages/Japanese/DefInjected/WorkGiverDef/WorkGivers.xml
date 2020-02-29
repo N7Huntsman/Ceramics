@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <DoBillsCollectClay.label>粘土を集める</DoBillsCollectClay.label>
+  <DoBillsCollectClay.verb>収集</DoBillsCollectClay.verb>
+  <DoBillsCollectClay.gerund>収集する</DoBillsCollectClay.gerund>
+
+  <UnloadKiln.label>セラミックをおろす</UnloadKiln.label>
+  <UnloadKiln.verb>荷下ろし</UnloadKiln.verb>
+  <UnloadKiln.gerund>から降ろす</UnloadKiln.gerund>
+
+  <LoadKiln.label>l未焼成のセラミックを装填する</LoadKiln.label>
+  <LoadKiln.verb>荷積み</LoadKiln.verb>
+  <LoadKiln.gerund>を積む</LoadKiln.gerund>
+
+  <DoBillsCeramics.label>セラミックワークステーションで物を作る</DoBillsCeramics.label>
+  <DoBillsCeramics.verb>クラフト</DoBillsCeramics.verb>
+  <DoBillsCeramics.gerund>を作る</DoBillsCeramics.gerund>
+
+
+</LanguageData>
