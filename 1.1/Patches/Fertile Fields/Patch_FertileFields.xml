@@ -3,7 +3,7 @@
 
 	<Operation Class="PatchOperationFindMod">
 					<mods>
-						<li>[RF] Fertile Fields [1.0]</li>					
+						<li>Fertile Fields [1.1]</li>						
 					</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
@@ -16,15 +16,19 @@
 				</value>
 			</li>
 
+			<!-- Replace Fertile Fields' brick wall recipe -->			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BrickWall"]/costList/RFFBricks</xpath>
+				<value>
+					<N7_FiredBrick>4</N7_FiredBrick>
+				</value>
+			</li>
+
             <!-- Remove Fertile Fields Content: PFFBricks, BrickWall, Clay -->
 		
             <li Class="PatchOperationRemove">
                 <xpath>Defs/ThingDef[defName="RFFBricks"]</xpath>
             </li>
-
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/ThingDef[defName="BrickWall"]</xpath>
-			</li>
 
 			<li Class="PatchOperationRemove">
 				<xpath>Defs/ThingDef[defName="RFFClay"]</xpath>
@@ -39,22 +43,23 @@
 			</li>
 
 			<!-- Replace RFFClay with N7_Clay -->
+
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_Gravel-RockyDirt"]/modExtensions/li[@Class="RFF_Code.Terrain"]/products/RFFClay</xpath>
+				<xpath>Defs/ThingDef[defName="Terraform_Gravel-RockyDirt"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
 				<value>
 					<N7_RawClay>1</N7_RawClay>
 				</value>
 			</li>
 
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_Gravel-Sand"]/modExtensions/li[@Class="RFF_Code.Terrain"]/products/RFFClay</xpath>
+				<xpath>Defs/ThingDef[defName="Terraform_Gravel-Sand"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
 				<value>
 					<N7_RawClay>1</N7_RawClay>
 				</value>
 			</li>
 
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_SoilF-Sand"]/modExtensions/li[@Class="RFF_Code.Terrain"]/products/RFFClay</xpath>
+				<xpath>Defs/ThingDef[defName="Terraform_SoilF-Sand"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
 				<value>
 					<N7_RawClay>1</N7_RawClay>
 				</value>
@@ -89,23 +94,23 @@
 			</li>
 
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="DirtToClay"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>4</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="SplitDirt2"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>1</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="DirtToClay2"]/products/RFFClay</xpath>
+				<xpath>Defs/RecipeDef[defName="SplitDirtBulk"]/products/RFFClay</xpath>
 				<value>
 					<N7_RawClay>5</N7_RawClay>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="DirtToClay"]/products/RFFClay</xpath>
+				<value>
+					<N7_RawClay>2</N7_RawClay>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="DirtToClayBulk"]/products/RFFClay</xpath>
+				<value>
+					<N7_RawClay>2</N7_RawClay>
 				</value>
 			</li>
 
@@ -117,7 +122,7 @@
 			</li>
 
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="MakeClay5"]/products/RFFClay</xpath>
+				<xpath>Defs/RecipeDef[defName="MakeClayBulk"]/products/RFFClay</xpath>
 				<value>
 					<N7_RawClay>5</N7_RawClay>
 				</value>
@@ -138,6 +143,23 @@
 			</li>
 
 			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="MakeDirtBulk"]/ingredients/li[1]/filter/thingDefs</xpath>
+				<value>
+					<thingDefs>
+						<li>N7_RawClay</li>
+					</thingDefs>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="MakeDirtBulk"]/fixedIngredientFilter/thingDefs/li[1]</xpath>
+				<value>
+					<li>N7_RawClay</li>
+				</value>
+			</li>
+	
+<!--
+			<li Class="PatchOperationReplace">
 				<xpath>Defs/RecipeDef[defName="MakeDirtEfficient"]/ingredients/li[1]/filter/thingDefs</xpath>
 				<value>
 					<thingDefs>
@@ -152,23 +174,7 @@
 					<li>N7_RawClay</li>
 				</value>
 			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="MakeDirt5"]/ingredients/li[1]/filter/thingDefs</xpath>
-				<value>
-					<thingDefs>
-						<li>N7_RawClay</li>
-					</thingDefs>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="MakeDirt5"]/fixedIngredientFilter/thingDefs/li[1]</xpath>
-				<value>
-					<li>N7_RawClay</li>
-				</value>
-			</li>
-
+			
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/RecipeDef[defName="MakeDirt5Efficient"]/ingredients/li[1]/filter/thingDefs</xpath>
 				<value>
@@ -184,7 +190,7 @@
 					<li>N7_RawClay</li>
 				</value>
 			</li>
-
+-->
 			<!-- Replace RFFBrick with N7_FiredBrick -->
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/TerrainDef[defName="HBBrickFloor"]/costList/RFFBricks</xpath>
