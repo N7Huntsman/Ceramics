@@ -163,7 +163,7 @@
         <li Class="PatchOperationReplace">
           <xpath>Defs/RecipeDef[defName="DirtToClayBulk"]/products/RFFClay</xpath>
           <value>
-            <N7_RawClay>2</N7_RawClay>
+            <N7_RawClay>10</N7_RawClay>
           </value>
         </li>
 
