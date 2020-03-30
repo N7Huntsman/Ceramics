@@ -137,6 +137,13 @@
           </value>
         </li>
 
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Terraform_Marsh-WaterDeep"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
+          <value>
+            <N7_RawClay>5</N7_RawClay>
+          </value>
+        </li>
+
         <!--Replace RFFClay with N7_Clay in Crafting Recipes-->
 
         <li Class="PatchOperationReplace">
