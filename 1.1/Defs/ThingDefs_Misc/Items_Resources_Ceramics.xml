@@ -294,7 +294,7 @@
       <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
       <stuffAdjective>mudbrick</stuffAdjective>
       <statFactors>
-			<MarketValue>0.2</MarketValue>
+			<MarketValue>0.05</MarketValue>
 			<Flammability>0</Flammability>
 			<BedRestEffectiveness>0.9</BedRestEffectiveness>
 			<MeleeWeapon_CooldownMultiplier>1.10</MeleeWeapon_CooldownMultiplier>	  
