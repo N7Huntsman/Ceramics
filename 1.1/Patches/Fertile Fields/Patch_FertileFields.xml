@@ -129,6 +129,63 @@
 			</li>
 
 			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Terraform_SoilF-Marsh"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
+				<value>
+					<N7_RawClay>5</N7_RawClay>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Terraform_Mud-Marsh"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
+				<value>
+					<N7_RawClay>5</N7_RawClay>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Terraform_SoilMarshy-Marsh"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
+				<value>
+					<N7_RawClay>5</N7_RawClay>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Terraform_Sand-WaterShallow"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
+				<value>
+					<N7_RawClay>5</N7_RawClay>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Terraform_SoilF-WaterShallow"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
+				<value>
+					<N7_RawClay>5</N7_RawClay>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Terraform_RockyDirt-WaterShallow"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
+				<value>
+					<N7_RawClay>5</N7_RawClay>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Terraform_WaterShallow-WaterDeep"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
+				<value>
+					<N7_RawClay>5</N7_RawClay>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Terraform_Marsh-WaterDeep"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
+				<value>
+					<N7_RawClay>5</N7_RawClay>
+				</value>
+			</li>
+
+
+			<li Class="PatchOperationReplace">
 				<xpath>Defs/RecipeDef[defName="MakeDirt"]/ingredients/li[1]/filter/thingDefs/li</xpath>
 				<value>
 					<li>N7_RawClay</li>

@@ -51,6 +51,20 @@
 				</value>
 			</li>
 
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="Make_Porcelain"]/ingredients/li[1]/count</xpath>
+				<value>
+					<count>5</count>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="Make_Porcelain"]/ingredients/li[2]/count</xpath>
+				<value>
+					<count>5</count>
+				</value>
+			</li>
+
 			</operations>		
 		</match>
 	</Operation>
