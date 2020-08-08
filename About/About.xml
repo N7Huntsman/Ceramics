@@ -4,7 +4,8 @@
 	<author>N7Huntsman</author>
 	<supportedVersions>
 		<li>1.0</li>
-		<li>1.1</li>		
+		<li>1.1</li>	
+		<li>1.2</li>		
 	</supportedVersions>
 	<packageId>n7huntsman.ceramics</packageId>
 	<description>Adds a variety of ceramics and other materials from across various tech level to the game.</description>
