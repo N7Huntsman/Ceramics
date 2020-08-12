@@ -668,6 +668,7 @@
 			<WorkToMake>1.1</WorkToMake>	  
 			<MaxHitPoints>0.4</MaxHitPoints>
 			<Beauty>2</Beauty>
+			<Cleanliness>0.4</Cleanliness>
       </statFactors>
       <statOffsets>
         <Beauty>5</Beauty>

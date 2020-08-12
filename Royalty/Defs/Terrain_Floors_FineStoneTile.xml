@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TerrainDef ParentName="FineTileStoneBase">
+    <defName>FineTilePorcelain</defName>
+    <label>fine porcelain tile</label>
+    <color>(246,246,245)</color>
+    <statBases>
+      <Cleanliness>0.2</Cleanliness>
+    </statBases>
+    <costList>
+      <N7_Porcelain>20</N7_Porcelain>
+    </costList>
+  </TerrainDef>
+  
+</Defs>
