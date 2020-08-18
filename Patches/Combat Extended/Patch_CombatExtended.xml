@@ -8,13 +8,19 @@
 					
 			<match Class="PatchOperationSequence">
 				<operations>
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="N7_Sand"]/statBases</xpath>
-					<value>
-						<Bulk>0.03</Bulk>
-					</value>
-				</li>
 
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Fertile Fields [1.1]</li>					
+					</mods>
+					<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="N7_Sand"]/statBases</xpath>
+						<value>
+							<Bulk>0.03</Bulk>
+						</value>
+					</nomatch>
+				</li>
+								
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="N7_RawClay"]/statBases</xpath>
 					<value>
@@ -35,11 +41,12 @@
 						<Bulk>0.1</Bulk>
 					</value>
 				</li>
-				<!--
+
+				
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="N7_HardenedCeramic"]/statBases</xpath>
 					<value>
-						<Bulk>0.4</Bulk>
+						<Bulk>0.25</Bulk>
 					</value>
 				</li>
 
@@ -63,23 +70,24 @@
 						<li>Steeled</li>
 					</value>
 				</li>
-
+				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Apparel_CombatHelmet"]/statBases/ArmorRating_Sharp</xpath>
 					<value>
-					<ArmorRating_Sharp>9</ArmorRating_Sharp>
+						<ArmorRating_Sharp>9</ArmorRating_Sharp>
 					</value>
 				</li>
 
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="Apparel_CombatHelmet"]/statBases/ArmorRating_Blunt</xpath>
 					<value>
-					<ArmorRating_Blunt>16</ArmorRating_Blunt>
+						<ArmorRating_Blunt>14</ArmorRating_Blunt>
 					</value>
 				</li>
-				-->
-				</operations>
-		</match>
+
+
+		</operations>
+		</match>		
 	</Operation>
 
 </Patch>

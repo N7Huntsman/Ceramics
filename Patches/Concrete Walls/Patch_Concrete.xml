@@ -7,7 +7,7 @@
 					</mods>
 		<match Class="PatchOperationFindMod">
 					<mods>
-						<li>[RF] Fertile Fields [1.0]</li>
+						<li>Fertile Fields [1.0]</li>
 					</mods>
 					
 			<nomatch Class="PatchOperationSequence">

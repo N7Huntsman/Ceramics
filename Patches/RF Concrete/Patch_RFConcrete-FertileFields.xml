@@ -4,10 +4,12 @@
 	<Operation Class="PatchOperationFindMod">
 					<mods>
 						<li>[RF] Concrete [1.0]</li>
+						<li>[RF] Concrete (Continued)</li>
 					</mods>
 		<match Class="PatchOperationFindMod">
 					<mods>
-						<li>[RF] Fertile Fields [1.0]</li>
+						<li>[RF] Fertile Fields [1.1]</li>
+						<li>Fertile Fields [1.1]</li>
 					</mods>
 					
 			<match Class="PatchOperationSequence">
