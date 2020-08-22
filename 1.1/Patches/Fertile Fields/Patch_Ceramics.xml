@@ -2,112 +2,65 @@
 <Patch>
 
 	<Operation Class="PatchOperationFindMod">
-					<mods>
-						<li>Fertile Fields [1.1]</li>								
-					</mods>
+		<mods>
+			<li>Fertile Fields [1.1]</li>
+		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-			
-			<!-- Allow plant scraps to be used to make mudbricks -->			
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="PlantScraps"]/thingCategories</xpath>
-				<value>
-					<li>PlantMatter</li>
-				</value>
-			</li>
-			
-			<!-- Replace Ceramics' sand with Fertile Fields' -->			
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="Make_RawBricks"]/ingredients/li[2]/filter/thingDefs</xpath>
-				<value>
-					<thingDefs>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="PlantScraps"]/thingCategories</xpath>
+					<value>
+						<li>PlantMatter</li>
+					</value>
+				</li>
+
+				<!-- Replace Ceramics' sand with Fertile Fields' -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="N7_Sand"]</xpath>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[
+						defName="Make_RawBricks" or
+						defName="Make_HardenedCeramic" or
+						defName="Make_Wafer" or
+						defName="Make_Porcelain" or
+						defName="Make_RawBricks" or
+						defName="Make_HardenedCeramic" or
+						defName="Make_Wafer" or
+						defName="Make_Porcelain"
+						]//thingDefs[li="N7_Sand"]/li</xpath>
+					<value>
 						<li>SandPile</li>
-					</thingDefs>
-				</value>
-			</li>
+					</value>
+				</li>
 
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="Make_HardenedCeramic"]/ingredients/li[2]/filter/thingDefs</xpath>
-				<value>
-					<thingDefs>
-						<li>SandPile</li>
-					</thingDefs>
-				</value>
-			</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="Collect50Sand"]/*[self::label or self::description]/text()</xpath>
+					<value>Collect sand</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="Collect50Sand"]/products/N7_Sand</xpath>
+					<value>
+						<SandPile>2</SandPile>
+					</value>
+				</li>
 
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="Make_Wafer"]/ingredients/li[2]/filter/thingDefs</xpath>
-				<value>
-					<thingDefs>
-						<li>SandPile</li>
-					</thingDefs>
-				</value>
-			</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="Collect25Clay"]/*[self::label or self::description]/text()</xpath>
+					<value>Collect clay</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="Collect25Clay"]/products/N7_RawClay</xpath>
+					<value>
+						<N7_RawClay>1</N7_RawClay>
+					</value>
+				</li>
 
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="Make_Porcelain"]/ingredients/li[1]/filter/thingDefs</xpath>
-				<value>
-					<thingDefs>
-						<li>SandPile</li>
-					</thingDefs>
-				</value>
-			</li>
+			</operations>
 
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="Make_RawBricks"]/fixedIngredientFilter/thingDefs/li[1]</xpath>
-				<value>
-					<li>SandPile</li>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="Make_HardenedCeramic"]/fixedIngredientFilter/thingDefs/li[1]</xpath>
-				<value>
-					<li>SandPile</li>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="Make_Wafer"]/fixedIngredientFilter/thingDefs/li[1]</xpath>
-				<value>
-					<li>SandPile</li>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="Make_Porcelain"]/fixedIngredientFilter/thingDefs/li[1]</xpath>
-				<value>
-					<li>SandPile</li>
-				</value>
-			</li>
-
-			<!-- Remove Ceramics Content: Clay Pit, Clay Spot, Sand, Recipes -->
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/RecipeDef[defName="Collect50Sand"]</xpath>
-			</li>
-
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/RecipeDef[defName="Collect25Clay"]</xpath>
-			</li>
-
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/WorkGiverDef[defName="DoBillsCollectClay"]</xpath>
-			</li>
-			
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/ThingDef[defName="ClayPit"]</xpath>
-			</li>
-
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/ThingDef[defName="ClayGatheringSpot"]</xpath>
-			</li>
-
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/ThingDef[defName="N7_Sand"]</xpath>
-			</li>
-
-			</operations>		
 		</match>
 	</Operation>
-	
+
 </Patch>

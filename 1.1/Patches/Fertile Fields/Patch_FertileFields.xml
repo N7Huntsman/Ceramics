@@ -2,275 +2,156 @@
 <Patch>
 
 	<Operation Class="PatchOperationFindMod">
-					<mods>
-						<li>Fertile Fields [1.1]</li>						
-					</mods>
+		<mods>
+			<li>Fertile Fields [1.1]</li>
+		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
 
-			<!-- Replace Fertile Fields' textures for sand with Ceramics' -->			
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="SandPile"]/graphicData/texPath</xpath>
-				<value>
-					<texPath>Things/Item/Sand</texPath>
-				</value>
-			</li>
+				<!-- Replace Fertile Fields' textures for sand with Ceramics' -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="SandPile"]/graphicData/texPath</xpath>
+					<value>
+						<texPath>Things/Item/Sand</texPath>
+					</value>
+				</li>
 
-			<!-- Replace Fertile Fields' brick wall recipe -->			
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="BrickWall"]/costList/RFFBricks</xpath>
-				<value>
-					<N7_FiredBrick>4</N7_FiredBrick>
-				</value>
-			</li>
+				<!-- Remove Fertile Fields Content: PFFBricks, BrickWall, Clay -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[
+						defName="RFFClay" or
+						defName="RFFBricks"
+						]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RecipeDef[
+						defName="MakeBricks" or
+						defName="MakeFastBricks"
+						]</xpath>
+				</li>
 
-            <!-- Remove Fertile Fields Content: PFFBricks, BrickWall, Clay -->
-		
-            <li Class="PatchOperationRemove">
-                <xpath>Defs/ThingDef[defName="RFFBricks"]</xpath>
-            </li>
+				<!-- Hide Brickwall -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="BrickWall"]</xpath>
+					<value>
+						<ThingDef>
+							<defName>BrickWall</defName>
+							<label>BrickWall-dummy</label>
+							<thingClass>Building</thingClass>
+						</ThingDef>
+					</value>
+				</li>
 
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/ThingDef[defName="RFFClay"]</xpath>
-			</li>
+				<!-- Replace RFFClay with N7_Clay -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[
+						defName="Terraform_Gravel-RockyDirt" or
+						defName="Terraform_Gravel-Sand" or
+						defName="Terraform_SoilF-Sand"
+						]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
+					<value>
+						<N7_RawClay>1</N7_RawClay>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[
+						defName="Terraform_RockyDirt-Gravel" or
+						defName="Terraform_Sand-Gravel" or
+						defName="Terraform_Sand-SoilF"
+						]/costList/RFFClay</xpath>
+					<value>
+						<N7_RawClay>1</N7_RawClay>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[
+						defName="Terraform_SoilF-Marsh" or
+						defName="Terraform_Mud-Marsh" or
+						defName="Terraform_SoilMarshy-Marsh" or
+						defName="Terraform_Sand-WaterShallow" or
+						defName="Terraform_SoilF-WaterShallow" or
+						defName="Terraform_RockyDirt-WaterShallow" or
+						defName="Terraform_WaterShallow-WaterDeep" or
+						defName="Terraform_Marsh-WaterDeep"
+						]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
+					<value>
+						<N7_RawClay>5</N7_RawClay>
+					</value>
+				</li>
 
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/RecipeDef[defName="MakeBricks"]</xpath>
-			</li>
+				<!-- Replace products in recipes -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="SplitDirt"]/products/RFFClay</xpath>
+					<value>
+						<N7_RawClay>1</N7_RawClay>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="SplitDirtBulk"]/products/RFFClay</xpath>
+					<value>
+						<N7_RawClay>5</N7_RawClay>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="DirtToClay"]/products/RFFClay</xpath>
+					<value>
+						<N7_RawClay>2</N7_RawClay>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="DirtToClayBulk"]/products/RFFClay</xpath>
+					<value>
+						<N7_RawClay>10</N7_RawClay>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeClay"]/products/RFFClay</xpath>
+					<value>
+						<N7_RawClay>1</N7_RawClay>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeClayBulk"]/products/RFFClay</xpath>
+					<value>
+						<N7_RawClay>5</N7_RawClay>
+					</value>
+				</li>
 
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/RecipeDef[defName="MakeFastBricks"]</xpath>
-			</li>
-
-			<!-- Replace RFFClay with N7_Clay -->
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_Gravel-RockyDirt"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>1</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_Gravel-Sand"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>1</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_SoilF-Sand"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>1</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_RockyDirt-Gravel"]/costList/RFFClay</xpath>
-				<value>
-					<N7_RawClay>1</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_Sand-Gravel"]/costList/RFFClay</xpath>
-				<value>
-					<N7_RawClay>1</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_Sand-SoilF"]/costList/RFFClay</xpath>
-				<value>
-					<N7_RawClay>1</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="SplitDirt"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>1</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="SplitDirtBulk"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>5</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="DirtToClay"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>2</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="DirtToClayBulk"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>2</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="MakeClay"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>1</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="MakeClayBulk"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>5</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_SoilF-Marsh"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>5</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_Mud-Marsh"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>5</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_SoilMarshy-Marsh"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>5</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_Sand-WaterShallow"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>5</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_SoilF-WaterShallow"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>5</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_RockyDirt-WaterShallow"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>5</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_WaterShallow-WaterDeep"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>5</N7_RawClay>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Terraform_Marsh-WaterDeep"]/modExtensions/li[@Class="RFF_Code.Terraformer"]/products/RFFClay</xpath>
-				<value>
-					<N7_RawClay>5</N7_RawClay>
-				</value>
-			</li>
-
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="MakeDirt"]/ingredients/li[1]/filter/thingDefs/li</xpath>
-				<value>
-					<li>N7_RawClay</li>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="MakeDirt"]/fixedIngredientFilter/thingDefs/li[1]</xpath>
-				<value>
-					<li>N7_RawClay</li>
-				</value>
-			</li>
-
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="MakeDirtBulk"]/ingredients/li[1]/filter/thingDefs</xpath>
-				<value>
-					<thingDefs>
+				<!-- Replace ingredients -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[
+						defName="MakeDirt" or
+						defName="MakeDirtBulk"
+						]//thingDefs[li="RFFClay"]/li</xpath>
+					<value>
 						<li>N7_RawClay</li>
-					</thingDefs>
-				</value>
-			</li>
+					</value>
+				</li>
 
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="MakeDirtBulk"]/fixedIngredientFilter/thingDefs/li[1]</xpath>
-				<value>
-					<li>N7_RawClay</li>
-				</value>
-			</li>
-	
-<!--
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="MakeDirtEfficient"]/ingredients/li[1]/filter/thingDefs</xpath>
-				<value>
-					<thingDefs>
-						<li>N7_RawClay</li>
-					</thingDefs>
-				</value>
-			</li>
+				<!-- Replace RFFBrick with N7_FiredBrick -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/TerrainDef[defName="HBBrickFloor"]/costList/RFFBricks</xpath>
+					<value>
+						<N7_FiredBrick>4</N7_FiredBrick>
+					</value>
+				</li>
 
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="MakeDirtEfficient"]/fixedIngredientFilter/thingDefs/li[1]</xpath>
-				<value>
-					<li>N7_RawClay</li>
-				</value>
-			</li>
-			
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="MakeDirt5Efficient"]/ingredients/li[1]/filter/thingDefs</xpath>
-				<value>
-					<thingDefs>
-						<li>N7_RawClay</li>
-					</thingDefs>
-				</value>
-			</li>
+				<!-- Remove Fertile Fields Brick Floor -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/TerrainDef[defName="BrickFloor"]</xpath>
+				</li>
 
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="MakeDirt5Efficient"]/fixedIngredientFilter/thingDefs/li[1]</xpath>
-				<value>
-					<li>N7_RawClay</li>
-				</value>
-			</li>
--->
-			<!-- Replace RFFBrick with N7_FiredBrick -->
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/TerrainDef[defName="HBBrickFloor"]/costList/RFFBricks</xpath>
-				<value>
-					<N7_FiredBrick>4</N7_FiredBrick>
-				</value>
-			</li>
-
-			<!-- Remove Fertile Fields Brick Floor -->
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/TerrainDef[defName="BrickFloor"]</xpath>
-			</li>
-
-			<!-- Adjust Research Tab Placement -->
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ResearchProjectDef[defName="RFF_Farming"]/researchViewY</xpath>
+				<!-- Adjust Research Tab Placement -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="RFF_Farming"]/researchViewY</xpath>
 					<value>
 						<researchViewY>4.5</researchViewY>
 					</value>
-			</li>
-	
-			</operations>		
+				</li>
+
+			</operations>
+
 		</match>
 	</Operation>
-	
+
 </Patch>

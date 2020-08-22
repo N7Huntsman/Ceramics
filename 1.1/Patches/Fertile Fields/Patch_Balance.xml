@@ -2,71 +2,89 @@
 <Patch>
 
 	<Operation Class="PatchOperationFindMod">
-					<mods>
-						<li>Fertile Fields [1.1]</li>								
-					</mods>
+		<mods>
+			<li>Fertile Fields [1.1]</li>
+		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
 
-		<!-- Because Fertile Fields uses relatively small quanties of teraforming resources, some stuff has to be adjusted. -->
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="Make_FiberFromWood"]/products/N7_PlantFiber</xpath>
-				<value>
-					<N7_PlantFiber>20</N7_PlantFiber>
-				</value>
-			</li>
+				<!-- Because Fertile Fields uses relatively small quanties of teraforming resources, some stuff has to be adjusted. -->
 
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="MineableClay"]/building/mineableYield</xpath>
-				<value>
-					<mineableYield>5</mineableYield>
-				</value>
-			</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="Make_FiberFromWood"]/products/N7_PlantFiber</xpath>
+					<value>
+						<N7_PlantFiber>20</N7_PlantFiber>
+					</value>
+				</li>
 
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="Make_RawMudbricks"]/ingredients/li[1]/count</xpath>
-				<value>
-					<count>5</count>
-				</value>
-			</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="MineableClay"]/building/mineableYield</xpath>
+					<value>
+						<mineableYield>5</mineableYield>
+					</value>
+				</li>
 
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="Make_RawMudbricks"]/ingredients/li[2]/count</xpath>
-				<value>
-					<count>5</count>
-				</value>
-			</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="Make_RawMudbricks"]/ingredients/li[1]/count</xpath>
+					<value>
+						<count>5</count>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="Make_RawMudbricks"]/ingredients/li[2]/count</xpath>
+					<value>
+						<count>5</count>
+					</value>
+				</li>
 
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="Make_RawBricks"]/ingredients/li[1]/count</xpath>
-				<value>
-					<count>5</count>
-				</value>
-			</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="Make_RawBricks"]/ingredients/li[1]/count</xpath>
+					<value>
+						<count>5</count>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="Make_RawBricks"]/ingredients/li[2]/count</xpath>
+					<value>
+						<count>5</count>
+					</value>
+				</li>
 
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="Make_RawBricks"]/ingredients/li[2]/count</xpath>
-				<value>
-					<count>5</count>
-				</value>
-			</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="Make_HardenedCeramic"]/ingredients/li[1]/count</xpath>
+					<value>
+						<count>2</count>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="Make_HardenedCeramic"]/ingredients/li[2]/count</xpath>
+					<value>
+						<count>3</count>
+					</value>
+				</li>
 
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="Make_Porcelain"]/ingredients/li[1]/count</xpath>
-				<value>
-					<count>5</count>
-				</value>
-			</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="Make_Wafer"]/ingredients/li[2]/count</xpath>
+					<value>
+						<count>5</count>
+					</value>
+				</li>
 
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/RecipeDef[defName="Make_Porcelain"]/ingredients/li[2]/count</xpath>
-				<value>
-					<count>5</count>
-				</value>
-			</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="Make_Porcelain"]/ingredients/li[1]/count</xpath>
+					<value>
+						<count>6</count>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="Make_Porcelain"]/ingredients/li[2]/count</xpath>
+					<value>
+						<count>2</count>
+					</value>
+				</li>
 
-			</operations>		
+			</operations>
 		</match>
 	</Operation>
-	
+
 </Patch>
