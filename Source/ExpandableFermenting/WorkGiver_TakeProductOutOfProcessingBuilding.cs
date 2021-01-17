@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using System.Collections.Generic;
+using RimWorld;
 using Verse;
 using Verse.AI;
 
@@ -18,14 +19,12 @@ namespace Ceramics
 
     class WorkGiver_TakeProductOutOfProcessingBuilding : WorkGiver_Scanner
     {
-
-        public override ThingRequest PotentialWorkThingRequest => ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial);
+        public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn) => Building_Processing.processors;
         public override PathEndMode PathEndMode => PathEndMode.Touch;
 
         public override bool HasJobOnThing(Pawn pawn, Thing thing, bool forced = false)
         {
-            Building_Processing building = thing as Building_Processing;
-            return building != null && building.Completed && !thing.IsBurning() && !thing.IsForbidden(pawn) && pawn.CanReserve(thing, 1, -1, null, forced);
+            return thing is Building_Processing building && building.Completed && !thing.IsBurning() && !thing.IsForbidden(pawn) && pawn.CanReserve(thing, 1, -1, null, forced);
         }
 
         public override Job JobOnThing(Pawn pawn, Thing thing, bool forced = false)

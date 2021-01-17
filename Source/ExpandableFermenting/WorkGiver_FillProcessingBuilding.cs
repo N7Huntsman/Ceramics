@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System;
+using System.Collections.Generic;
 using Verse;
 using Verse.AI;
 
@@ -8,13 +9,10 @@ namespace Ceramics
 
     public class WorkGiver_FillProcessingBuilding : WorkGiver_Scanner
     {
-
-        public static JobDef LoadProcessingBuilding;
-
         private static string TemperatureTrans;
         private static string NoIngredientTrans;
 
-        public override ThingRequest PotentialWorkThingRequest => ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial);
+        public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn) => Building_Processing.processors;
         public override PathEndMode PathEndMode => PathEndMode.Touch;
 
         public static void ResetStaticData()
