@@ -11,6 +11,7 @@ namespace Ceramics
     [StaticConstructorOnStartup]
     class Building_Processing : Building
     {
+        public static HashSet<Building_Processing> processors = new HashSet<Building_Processing>();
         private const float progressAtCompleted = 1f;
         private static readonly Vector2 BarSize = new Vector2(0.55f, 0.1f);
         private static readonly Color BarZeroProgressColor = new Color(0.4f, 0.27f, 0.22f);
@@ -51,6 +52,18 @@ namespace Ceramics
                     barFilledCachedMat = null;
                 }
             }
+        }
+
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.SpawnSetup(map, respawningAfterLoad);
+            processors.Add(this);
+        }
+
+        public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
+        {
+            base.DeSpawn(mode);
+            processors.Remove(this);
         }
 
         public virtual bool UsableNow
@@ -173,12 +186,10 @@ namespace Ceramics
             if (!Empty && (tempRuinable == null || !tempRuinable.Ruined))
             {
                 string contentsLabel = Completed ? CompProcessing.ProductDef.label : CompProcessing.IngredientLabel;
-                stringBuilder.AppendLine("FermentingBuildingContainsSomething".Translate(new object[]
-                {
-                    contentsCount,
+                stringBuilder.AppendLine("FermentingBuildingContainsSomething".Translate(contentsCount,
                     Capacity,
                     contentsLabel
-                }));
+                ));
             }
             if (!Empty)
             {
@@ -188,11 +199,10 @@ namespace Ceramics
                 }
                 else
                 {
-                    stringBuilder.AppendLine("FermentationProgress".Translate(new object[]
-                    {
+                    stringBuilder.AppendLine("FermentationProgress".Translate(
                         Progress.ToStringPercent(),
                         EstimatedTicksLeft.ToStringTicksToPeriod()
-                    }));
+                   ));
                 }
             }
             if (tempRuinable != null)

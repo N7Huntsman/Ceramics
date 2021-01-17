@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Source/ExpandableFermenting/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
+/Source/ExpandableFermenting/obj/Release/Ceramics.csprojAssemblyReference.cache
